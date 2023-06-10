@@ -1,0 +1,11 @@
+@import "src/scss/general/normalizer";
+@import "src/scss/elements/elements";
+@import "src/scss/general/fonts";
+@import "src/scss/general/header";
+@import "src/scss/main_page/main_page";
+@import "src/scss/general/footer";
+* {
+  font-family: 'Akrobat', sans-serif;
+  letter-spacing: 0.225em;
+  font-size: 18px;
+}

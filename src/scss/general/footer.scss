@@ -1,0 +1,29 @@
+.footer {
+  .container {
+    border: 2px solid red;
+    justify-content: space-between;
+  }
+  &__logo-menu {
+    flex: 1;
+  }
+  &__contacts {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    &-wrapper {
+      border: 1px solid red;
+      .time {
+        border: 1px solid green;
+      }
+      .phone {
+        border: 1px solid orange;
+      }
+      .social {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__auth {
+    flex: 1;
+  }
+}

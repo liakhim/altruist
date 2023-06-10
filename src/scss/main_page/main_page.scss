@@ -1,0 +1,163 @@
+.first-block {
+  width: 100%;
+  min-height: 800px;
+  height: 100vh;
+  overflow: hidden;
+  &__menu {
+    width: 50%;
+    position: relative;
+    .background-block {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .menu-block {
+      position: relative;
+      height: 100%;
+      width: 384px;
+      backdrop-filter: blur(15px);
+      &-wrapper {
+        height: 100%;
+        padding: 40px 30px 40px 100px;
+        flex-direction: column;
+        .logo {
+          max-width: 260px;
+          img {
+            width: 100%;
+          }
+        }
+        .list {
+          margin-top: auto;
+          ul {
+            li:not(:first-child) {
+              margin-top: 22px;
+            }
+          }
+        }
+        .auth-block {
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+  &__call-to-action {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    .background-block {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .call-to_action-block {
+      position: relative;
+    }
+  }
+}
+.collections {
+  .collections-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .collections-preview-block {
+      flex: 1;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      width: 50%;
+      position: relative;
+      .background-block {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &-name {
+        background: rgba(255, 255, 255, 0.3);
+        .texts {
+          .large-text {
+            span {
+              font-size: 40px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .collections-preview-block.text-right {
+      justify-content: flex-end;
+    }
+    .collections-preview-block.text-left {
+      justify-content: flex-start;
+    }
+    .collections-preview-block.black-text-button {
+      .blur-block {
+        .link {
+          &-text {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+.philosophy-block {
+  padding: 180px 0 150px;
+  .container {
+    position: relative;
+    .circle-image {
+      position: absolute;
+      top: -140px;
+      right: 260px;
+      img {}
+    }
+    .title {
+
+    }
+    .content {
+      p {
+        font-size: 66px;
+        span {
+          font-size: 65px;
+          font-family: 'Aromanus', sans-serif;
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: initial;
+        }
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      &__image {}
+      &__text {
+        p {
+          padding: 0 0 0 30px;
+          a {
+            text-decoration: underline!important;
+          }
+        }
+      }
+    }
+  }
+}
