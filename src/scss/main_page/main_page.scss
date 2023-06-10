@@ -127,7 +127,7 @@
     position: relative;
     .circle-image {
       position: absolute;
-      top: -140px;
+      top: -160px;
       right: 260px;
       img {}
     }
@@ -137,18 +137,29 @@
     .content {
       p {
         font-size: 66px;
+        line-height: 70px;
         span {
           font-size: 65px;
           font-family: 'Aromanus', sans-serif;
           display: block;
           text-transform: uppercase;
           letter-spacing: initial;
+          line-height: 70px;
+        }
+        span.gray-text {
+          border: 1px solid #BABBC1;
+          color: #BABBC1;
+          border-radius: 50px;
+          display: flex;
+          padding: 5px 15px 0px 15px;
+          margin-left: -15px;
         }
       }
     }
     .link {
       display: flex;
       align-items: center;
+      margin-top: 40px;
       &__image {}
       &__text {
         p {
