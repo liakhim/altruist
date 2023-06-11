@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altruist | Cart</title>
+    <link rel="stylesheet" href="../../dist/css/app.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <a href="/" class="logo">
+                    <img src="/src/assets/logo-black.svg" alt="">
+                </a>
+                <div class="menu-actions-block">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="/">главная</a>
+                            </li>
+                            <li>
+                                <a href="/">коллекции</a>
+                            </li>
+                            <li>
+                                <a href="/">доставка/оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <a href="#">
+                            <img src="/src/assets/icons/basket.svg" alt="">
+                        </a>
+                        <a class="like" href="#">
+                            <img src="/src/assets/icons/like.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="burger">
+                    <img src="/src/assets/icons/burger.svg" alt="">
+                </div>
+                <div class="mobile-menu container">
+                    <div class="mobile-menu-list">
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="collections">коллекции</a></li>
+                            <li><a href="delivery">доставка/оплата</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section>
+               <div class="container">
+                   <div class="cart-list">
+                       <div class="cart-list-goods">
+                           <div class="title">
+                               <p>
+                                   <span>Шорты из мягкого полотна</span>
+                                   <span>|</span>
+                                   <span>LT5457O02-T0</span>
+                               </p>
+                           </div>
+                           <div class="price">
+                               <p>2990 р.</p>
+                           </div>
+                           <div class="info">
+                               <div>
+                                   <p>
+                                       <span>Цвет:</span>
+                                       <span>мультицвет, разноцветный</span>
+                                   </p>
+                                   <p>
+                                       <span>Размер:</span>
+                                       <span>М</span>
+                                   </p>
+                                   <p>
+                                       <span>Количество:</span>
+                                       <span>1 шт</span>
+                                   </p>
+                               </div>
+                           </div>
+                           <div class="quantity-counter">
+                               <div class="minus">
+                                   <button>
+                                       <span>-</span>
+                                   </button>
+                               </div>
+                               <div class="result">
+                                   <span>1 шт.</span>
+                               </div>
+                               <div class="plus">
+                                   <button>
+                                       <span>+</span>
+                                   </button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="cart-list-sum">
+                           <div class="title">
+                               <p>Итого:</p>
+                           </div>
+                           <div class="delimiter-block"></div>
+                           <div class="price-info">
+                               <span>1 ТОВАР НА СУММУ</span>
+                               <span>2990₽</span>
+                           </div>
+                           <div class="price-result">
+                               <b>ИТОГ</b>
+                               <span>2990₽</span>
+                           </div>
+                           <div class="delimiter-block"></div>
+                           <div class="button-block">
+                               <button class="btn border-button black-button">
+                                   <span>Оформить заказ</span>
+                               </button>
+                               <div class="checkbox-block">
+                                   <label class="checkbox-type-1">
+                                       <input type="checkbox">
+                                       <span class="after"></span>
+                                   </label>
+                                   <p>Я принимаю пользовательское соглашение и даю согласие на обработку персональных данных</p>
+                               </div>
+                               <div class="checkbox-block">
+                                   <label class="checkbox-type-1">
+                                       <input type="checkbox">
+                                       <span class="after"></span>
+                                   </label>
+                                   <p>Подписаться на рассылку персональных предложений и акций</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="form-block person-form">
+                        <div class="form-block-title">
+                            <p>Ваши данные</p>
+                        </div>
+                        <form>
+                            <div class="form-row">
+                                <label>
+                                    <input type="text" name="name" placeholder="Ваше имя">
+                                </label>
+                                <label>
+                                    <input type="text" name="last_name" placeholder="Ваше фамилия">
+                                </label>
+                            </div>
+                            <div class="form-row">
+                                <label>
+                                    <input type="tel" name="phone" placeholder="Ваш телефон">
+                                </label>
+                                <label>
+                                    <input type="email" name="email" placeholder="Ваше email">
+                                </label>
+                            </div>
+                            <div class="form-row">
+                                <label>
+                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-block delivery-form">
+                        <form>
+                            <div class="form-block-title">
+                                <p>Данные для доставки</p>
+                            </div>
+                            <div class="form-block-tabs">
+                                <div class="form-block-tab-title">
+                                    <p>Курьером СДЭК</p>
+                                </div>
+                                <div class="form-block-tab-title">
+                                    <p>Самовывоз из ПВЗ СДЭК</p>
+                                </div>
+                            </div>
+                            <div class="courier-tab">
+                                <form class="courier">
+                                    <div class="form-row">
+                                        <label>
+                                            <input type="text" name="city" placeholder="Ваш город">
+                                        </label>
+                                        <label>
+                                            <input type="text" name="street" placeholder="Улица, дом, квартира">
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="sdek-point-tab">
+                                <form>
+                                    <div class="form-row">
+                                        <label>
+                                            <input type="text" name="city" placeholder="Ваш город">
+                                        </label>
+                                        <label>
+                                            <input type="text" name="street" placeholder="Адрес ПВЗ">
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="action-block">
+                                <div class="sdek-delivery-info">
+                                    <p>Доставка:от 3 дней</p>
+                                    <p>Cтоимость:от 349 руб.</p>
+                                </div>
+                                <button class="btn border-button black-button">
+                                    <span>Перейти к оплате</span>
+                                </button>
+                                <div class="social-icons-block">
+                                    <div class="social-icon">
+                                        <img src="/src/assets/icons/payment-systems/visa.svg" alt="">
+                                    </div>
+                                    <div class="social-icon">
+                                        <img src="/src/assets/icons/payment-systems/mastercard.svg" alt="">
+                                    </div>
+                                    <div class="social-icon">
+                                        <img src="/src/assets/icons/payment-systems/maestro.svg" alt="">
+                                    </div>
+                                    <div class="social-icon">
+                                        <img src="/src/assets/icons/payment-systems/mir.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container d-flex">
+                <div class="footer__logo-menu d-flex">
+                    <a href="/" class="logo">
+                        <img src="/src/assets/logo-black.svg" alt="">
+                    </a>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="/"><span>главная</span></a>
+                            </li>
+                            <li>
+                                <a href="collections"><span>коллекции</span></a>
+                            </li>
+                            <li>
+                                <a href="delivery"><span>доставка/оплата</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__contacts d-flex">
+                    <div class="footer__contacts-wrapper">
+                        <div class="time">
+                            <p>с 9:00 до 21:00</p>
+                        </div>
+                        <div class="phone">
+                            <a href="tel:74957777777">+7 495 777 77 77</a>
+                        </div>
+                        <div class="social d-flex">
+                            <div class="social__block">
+                                <img src="/src/assets/icons/tg.svg" alt="">
+                            </div>
+                            <div class="social__block">
+                                <img src="/src/assets/icons/wa.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__auth">
+                    <button type="button" class="personal">
+                    <span class="personal__title">
+                        <span>Личный кабинет</span>
+                    </span>
+                        <span class="personal__icon">
+                        <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                    </span>
+                    </button>
+                    <div class="org">
+                        <p>пао «василек</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

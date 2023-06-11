@@ -1,0 +1,38 @@
+.btn.border-button {
+  border: 1px solid #000;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .border-button-icon.right-icon {
+    margin-left: 10px;
+  }
+  .border-button-icon.left-icon {
+    margin-right: 10px;
+  }
+  &:focus {
+    box-shadow: 0 0 10px #00000020;
+  }
+  &:hover {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    .border-button-icon {
+      filter: invert(1);
+    }
+  }
+}
+.btn.border-button.black-button {
+  border-radius: 0;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  &:focus {
+    box-shadow: 0 0 10px #00000020;
+  }
+  &:hover {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+  }
+}

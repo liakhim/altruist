@@ -1,0 +1,156 @@
+$step: 4;
+.checkbox-type-1 {
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  width: auto;
+  height: 16px;
+  span:not(.after) {
+    line-height: 1;
+    margin-left: 2 * $step + px;
+  }
+  .after {
+    margin: 0 0 0 -6px;
+  }
+  .after:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #BFBFBF;
+    border-radius: 0px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  input[type=checkbox] {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #BFBFBF;
+      border-radius: 0px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+  }
+  input[class=indeterminate] + .after {
+    &:after {
+      border: 1px solid #000;
+      background-color: #000;
+    }
+    &:before {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      width: 8px;
+      height: 2px;
+      background: #fff;
+      z-index: 1;
+    }
+  }
+  input[class=indeterminate] {
+    &:after {
+      border: 1px solid #000;
+      background-color: #000;
+    }
+    &:before {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      width: 8px;
+      height: 2px;
+      background: #fff;
+      z-index: 1;
+    }
+  }
+  input[class=indeterminate]:checked {
+    &:before {
+      background: transparent!important;
+    }
+  }
+  input[class=indeterminate]:checked + .after {
+    &:before {
+      background: transparent!important;
+    }
+  }
+  input[class=indeterminate]:disabled + .after {
+    &:after {
+      // border: 1px solid red;
+      border: 1px solid #00000030;
+      background-color: #00000030;
+    }
+  }
+  input[type=checkbox]:checked + .after {
+    // border: 1px solid orange;
+    &:after {
+      content: '';
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+    &:before {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 6px;
+      height: 9px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+  }
+  input[type=checkbox]:checked {
+    &:after {
+      border: 1px solid #4993FF;
+      background-color: #4993FF;
+    }
+    &:before {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      width: 6px;
+      height: 9px;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+  }
+  input[type=checkbox]:checked:disabled {
+    &:after {
+      border: 1px solid #86B7FE;
+      background-color: #86B7FE;
+    }
+  }
+  input[type=checkbox]:checked:disabled + .after {
+    &:after {
+      border: 1px solid #86B7FE;
+      background-color: #86B7FE;
+    }
+  }
+  input[type=checkbox]:disabled + .after {
+    // border: 1px solid red!important;
+  }
+  input[type=checkbox] {
+    width: 0!important;
+    height: 0!important;
+    opacity: 0;
+  }
+}

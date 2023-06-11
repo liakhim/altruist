@@ -1,0 +1,33 @@
+.email-subscription-block {
+  background: rgba(186, 187, 193, 0.2);
+  padding: 100px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      h3 {
+        font-family: 'Aromanus', sans-serif;
+        text-transform: uppercase;
+        font-size: 40px;
+        letter-spacing: initial;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+    .form {
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        input {
+          width: 330px;
+        }
+      }
+      button {
+        height: 83px;
+      }
+    }
+  }
+}

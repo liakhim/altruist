@@ -1,0 +1,23 @@
+.delivery-block {
+  border: 1px solid green;
+  .title {
+    max-width: 870px;
+    p {}
+    h2 {
+      font-family: 'Aromanus', sans-serif;
+      font-size: 66px;
+      text-transform: uppercase;
+      letter-spacing: initial;
+    }
+  }
+  .content {
+    p {
+      font-size: 16px;
+    }
+  }
+  .button-block {
+    button {
+      padding: 30px 20px;
+    }
+  }
+}
