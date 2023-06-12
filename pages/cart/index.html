@@ -14,45 +14,98 @@
     <div id="app">
         <header class="header">
             <div class="container">
-                <a href="/" class="logo">
-                    <img src="/src/assets/logo-black.svg" alt="">
-                </a>
-                <div class="menu-actions-block">
-                    <div class="menu">
-                        <ul>
-                            <li>
-                                <a href="/">главная</a>
-                            </li>
-                            <li>
-                                <a href="/">коллекции</a>
-                            </li>
-                            <li>
-                                <a href="/">доставка/оплата</a>
-                            </li>
-                        </ul>
+                <div class="header-wrapper">
+                    <a href="/" class="logo">
+                        <img :class="{'mobile-version': showMenu}" src="/src/assets/logo-black.svg" alt="">
+                    </a>
+                    <div class="menu-actions-block">
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <a href="/">главная</a>
+                                </li>
+                                <li>
+                                    <a href="/">коллекции</a>
+                                </li>
+                                <li>
+                                    <a href="/">доставка/оплата</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="actions">
+                            <div class="action-block cart">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/basket.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                            <div class="action-block likes">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/like.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div class="action-block auth">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <a href="#">
-                            <img src="/src/assets/icons/basket.svg" alt="">
-                        </a>
-                        <a class="like" href="#">
-                            <img src="/src/assets/icons/like.svg" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="/src/assets/icons/personal-in-black.svg" alt="">
-                        </a>
+                    <div class="burger" @click="showMenu = !showMenu">
+                        <img src="/src/assets/icons/burger.svg" alt="">
                     </div>
                 </div>
-                <div class="burger">
-                    <img src="/src/assets/icons/burger.svg" alt="">
-                </div>
-                <div class="mobile-menu container">
+                <div class="mobile-menu container" :class="{'active': showMenu}">
                     <div class="mobile-menu-list">
                         <ul>
                             <li><a href="/">Главная</a></li>
                             <li><a href="collections">коллекции</a></li>
                             <li><a href="delivery">доставка/оплата</a></li>
                         </ul>
+                    </div>
+                    <div class="mobile-menu-contacts">
+                        <p>с 9:00 до 21:00</p>
+                        <a href="tel:84957777777">+7 495 777 77 77</a>
+                    </div>
+                    <div class="mobile-menu-socials">
+                        <div class="mobile-menu-social-icon">
+                            <img src="/src/assets/icons/tg.svg" alt="">
+                        </div>
+                        <div class="mobile-menu-social-icon">
+                            <img src="/src/assets/icons/wa.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="mobile-menu-actions">
+                        <div class="cart-likes">
+                            <div class="action-block cart">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/basket.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>1</span>
+                                </div>
+                            </div>
+                            <div class="action-block likes">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/like.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auth">
+                            <div class="action-block auth">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -290,5 +343,15 @@
             </div>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                showMenu: false
+            }
+        })
+    </script>
 </body>
 </html>

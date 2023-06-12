@@ -19,6 +19,14 @@
         li:not(:last-child) {
           margin-bottom: 22px;
         }
+        li {
+          a {
+            span {
+              letter-spacing: 0.225em;
+              font-size: 18px;
+            }
+          }
+        }
       }
     }
   }
@@ -27,9 +35,19 @@
     flex-direction: column;
     align-items: center;
     &-wrapper {
-      .time {}
+      .time {
+        p {
+          letter-spacing: 0.225em;
+          font-size: 18px;
+        }
+      }
       .phone {
         margin-top: 22px;
+        a {
+          letter-spacing: 0.225em;
+          font-size: 18px;
+          font-weight: 500;
+        }
       }
       .social {
         justify-content: flex-start;
@@ -48,7 +66,12 @@
     flex-direction: column;
     align-items: flex-end;
     .personal {
-      &__title {}
+      &__title {
+        span {
+          letter-spacing: 0.225em;
+          font-size: 18px;
+        }
+      }
       &__icon {}
     }
     .org {
@@ -74,6 +97,7 @@
       flex: 1;
       .logo {
         margin-right: 80px;
+        margin-bottom: 40px;
         width: 157px;
         img {
           width: 100%;
