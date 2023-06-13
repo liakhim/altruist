@@ -6,10 +6,14 @@
 @import "src/scss/collections_page/email-subscription-block";
 @import "src/scss/collections_page/delivery-block";
 @import "src/scss/payment-info/payment-info";
+@import "src/scss/cart/cart-page";
 @import "src/scss/collections_page/collections-first-block";
 @import "src/scss/general/footer";
 * {
   font-family: 'Akrobat', sans-serif;
   letter-spacing: initial;
   font-size: 18px;
+}
+.gray-background {
+  background: #F5F5F5;
 }

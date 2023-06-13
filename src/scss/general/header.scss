@@ -7,17 +7,16 @@
 .header {
   min-height: 155px;
   display: flex;
-  align-items: flex-start;
-
+  align-items: center;
+  background: #fff;
   .container {
     display: flex;
     justify-content: space-between;
 
     .header-wrapper {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
-      padding: 20px 0 0 0;
       width: 100%;
 
       .logo {

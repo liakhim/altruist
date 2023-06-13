@@ -16,10 +16,19 @@
   margin: 0;
   height: 83px;
   border: 1px solid #000;
+  outline: none;
+  padding: 10px;
   &::placeholder {
     font-size: 16px;
   }
+  &:focus-visible {
+    border: 1px solid #BABBC1;
+    &::placeholder {
+      color: transparent;
+    }
+  }
   &:focus {
+    border: 1px solid #BABBC1;
     &::placeholder {
       display: none;
     }

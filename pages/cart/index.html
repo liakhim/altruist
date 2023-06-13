@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="gray-background">
         <header class="header">
             <div class="container">
                 <div class="header-wrapper">
@@ -115,45 +115,52 @@
                <div class="container">
                    <div class="cart-list">
                        <div class="cart-list-goods">
-                           <div class="title">
-                               <p>
-                                   <span>Шорты из мягкого полотна</span>
-                                   <span>|</span>
-                                   <span>LT5457O02-T0</span>
-                               </p>
-                           </div>
-                           <div class="price">
-                               <p>2990 р.</p>
-                           </div>
-                           <div class="info">
-                               <div>
-                                   <p>
-                                       <span>Цвет:</span>
-                                       <span>мультицвет, разноцветный</span>
-                                   </p>
-                                   <p>
-                                       <span>Размер:</span>
-                                       <span>М</span>
-                                   </p>
-                                   <p>
-                                       <span>Количество:</span>
-                                       <span>1 шт</span>
-                                   </p>
+                           <div class="cart-item">
+                               <div class="cart-item__image">
+                                   <img src="/src/assets/cart-item-image.jpg" alt="">
                                </div>
-                           </div>
-                           <div class="quantity-counter">
-                               <div class="minus">
-                                   <button>
-                                       <span>-</span>
-                                   </button>
-                               </div>
-                               <div class="result">
-                                   <span>1 шт.</span>
-                               </div>
-                               <div class="plus">
-                                   <button>
-                                       <span>+</span>
-                                   </button>
+                               <div class="cart-item__info">
+                                   <div class="title">
+                                       <p>
+                                           <span class="cart-item-title-name">Шорты из мягкого полотна</span>
+                                           <span class="cart-item-title-delimiter">|</span>
+                                           <span class="cart-item-title-art">LT5457O02-T0</span>
+                                       </p>
+                                   </div>
+                                   <div class="price">
+                                       <p>2990 р.</p>
+                                   </div>
+                                   <div class="info">
+                                       <div class="info-property">
+                                           <p>
+                                               <span class="info-property-key">Цвет:</span>
+                                               <span class="info-property-value">мультицвет, разноцветный</span>
+                                           </p>
+                                           <p>
+                                               <span class="info-property-key">Размер:</span>
+                                               <span class="info-property-value">М</span>
+                                           </p>
+                                           <p>
+                                               <span class="info-property-key">Количество:</span>
+                                               <span class="info-property-value">1 шт</span>
+                                           </p>
+                                       </div>
+                                   </div>
+                                   <div class="cart-item__info-quantity-counter">
+                                       <div class="minus">
+                                           <button class="btn border-button">
+                                               <img class="border-button-icon" src="/src/assets/icons/minus.svg" alt="">
+                                           </button>
+                                       </div>
+                                       <div class="result">
+                                           <span>100</span>
+                                       </div>
+                                       <div class="plus">
+                                           <button class="btn border-button">
+                                               <img class="border-button-icon" src="/src/assets/icons/plus.svg" alt="">
+                                           </button>
+                                       </div>
+                                   </div>
                                </div>
                            </div>
                        </div>
@@ -163,12 +170,12 @@
                            </div>
                            <div class="delimiter-block"></div>
                            <div class="price-info">
-                               <span>1 ТОВАР НА СУММУ</span>
-                               <span>2990₽</span>
+                               <span class="price-info-sign">1 ТОВАР НА СУММУ</span>
+                               <span class="price-info-value">2990₽</span>
                            </div>
                            <div class="price-result">
-                               <b>ИТОГ</b>
-                               <span>2990₽</span>
+                               <b class="price-result-sign">ИТОГ</b>
+                               <span class="price-result-value">2990₽</span>
                            </div>
                            <div class="delimiter-block"></div>
                            <div class="button-block">
@@ -180,14 +187,15 @@
                                        <input type="checkbox">
                                        <span class="after"></span>
                                    </label>
-                                   <p>Я принимаю пользовательское соглашение и даю согласие на обработку персональных данных</p>
+                                   <p class="checkbox-block-label">Я принимаю <a href="#">пользовательское соглашение</a> и даю согласие на
+                                       <a href="#">обработку персональных данных</a></p>
                                </div>
                                <div class="checkbox-block">
                                    <label class="checkbox-type-1">
                                        <input type="checkbox">
                                        <span class="after"></span>
                                    </label>
-                                   <p>Подписаться на рассылку персональных предложений и акций</p>
+                                   <p class="checkbox-block-label">Подписаться на рассылку персональных предложений и акций</p>
                                </div>
                            </div>
                        </div>
@@ -203,23 +211,23 @@
                         <form>
                             <div class="form-row">
                                 <label>
-                                    <input type="text" name="name" placeholder="Ваше имя">
+                                    <input class="custom-input" type="text" name="name" placeholder="Ваше имя">
                                 </label>
                                 <label>
-                                    <input type="text" name="last_name" placeholder="Ваше фамилия">
-                                </label>
-                            </div>
-                            <div class="form-row">
-                                <label>
-                                    <input type="tel" name="phone" placeholder="Ваш телефон">
-                                </label>
-                                <label>
-                                    <input type="email" name="email" placeholder="Ваше email">
+                                    <input class="custom-input" type="text" name="last_name" placeholder="Ваше фамилия">
                                 </label>
                             </div>
                             <div class="form-row">
                                 <label>
-                                    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                                    <input class="custom-input" type="tel" name="phone" placeholder="Ваш телефон">
+                                </label>
+                                <label>
+                                    <input class="custom-input" type="email" name="email" placeholder="Ваше email">
+                                </label>
+                            </div>
+                            <div class="form-row">
+                                <label class="text-area-label">
+                                    <textarea placeholder="Комментарий" class="custom-input" name="comment" id="comment" cols="30" rows="10"></textarea>
                                 </label>
                             </div>
                         </form>
@@ -230,46 +238,52 @@
                                 <p>Данные для доставки</p>
                             </div>
                             <div class="form-block-tabs">
-                                <div class="form-block-tab-title">
+                                <div class="form-block-tab-title" :class="{'active': activeTab === 'courier'}" @click="activeTab = 'courier'">
                                     <p>Курьером СДЭК</p>
                                 </div>
-                                <div class="form-block-tab-title">
+                                <div class="form-block-tab-title" :class="{'active': activeTab === 'sdek-point'}" @click="activeTab = 'sdek-point'">
                                     <p>Самовывоз из ПВЗ СДЭК</p>
                                 </div>
                             </div>
-                            <div class="courier-tab">
+                            <div class="tab-content courier-tab" :class="{'active': activeTab === 'courier'}">
                                 <form class="courier">
                                     <div class="form-row">
                                         <label>
-                                            <input type="text" name="city" placeholder="Ваш город">
+                                            <input class="custom-input" type="text" name="city" placeholder="Ваш город">
                                         </label>
                                         <label>
-                                            <input type="text" name="street" placeholder="Улица, дом, квартира">
+                                            <input class="custom-input" type="text" name="street" placeholder="Улица, дом, квартира">
                                         </label>
                                     </div>
                                 </form>
                             </div>
-                            <div class="sdek-point-tab">
+                            <div class="tab-content sdek-point-tab" :class="{'active': activeTab === 'sdek-point'}">
                                 <form>
                                     <div class="form-row">
                                         <label>
-                                            <input type="text" name="city" placeholder="Ваш город">
+                                            <input class="custom-input" type="text" name="city" placeholder="Ваш город">
                                         </label>
                                         <label>
-                                            <input type="text" name="street" placeholder="Адрес ПВЗ">
+                                            <input class="custom-input" type="text" name="street" placeholder="Адрес ПВЗ">
                                         </label>
                                     </div>
                                 </form>
+                                <div class="map-block">
+                                    <img src="/src/assets/world.jpg" alt="">
+                                </div>
                             </div>
                             <div class="action-block">
                                 <div class="sdek-delivery-info">
-                                    <p>Доставка:от 3 дней</p>
-                                    <p>Cтоимость:от 349 руб.</p>
+                                    <p>Доставка: от 3 дней</p>
+                                    <p>Cтоимость: от 349 руб.</p>
                                 </div>
-                                <button class="btn border-button black-button">
+                                <button class="btn border-button black-button to-pay-button">
                                     <span>Перейти к оплате</span>
                                 </button>
                                 <div class="social-icons-block">
+                                    <div class="social-sign">
+                                        <p>Оплата онлайн:</p>
+                                    </div>
                                     <div class="social-icon">
                                         <img src="/src/assets/icons/payment-systems/visa.svg" alt="">
                                     </div>
@@ -349,7 +363,8 @@
             el: '#app',
             data: {
                 message: 'Hello Vue!',
-                showMenu: false
+                showMenu: false,
+                activeTab: 'courier' // or sdek-point
             }
         })
     </script>
