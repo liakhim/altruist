@@ -1,0 +1,63 @@
+.account-order-item {
+  background: #f8f8f8;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &-title {
+    border-bottom: 1px solid #BABBC1;
+    padding: 0 0 30px 0;
+    p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.225em;
+    }
+  }
+  &-body {
+    .order-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 26px 30px 26px 0;
+      &-part {
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.225em;
+        }
+      }
+      .name {
+        p {
+          font-weight: 700;
+        }
+      }
+      .art {
+        p {
+          color: #BABBC1
+        }
+      }
+      .quantity {
+        p {
+          color: #BABBC1
+        }
+      }
+      .price {
+        p {
+          font-weight: 700;
+        }
+      }
+      .status {
+        p {
+          color: #BABBC1
+        }
+      }
+    }
+  }
+}
+.order-list-delimiter {
+  height: 19px;
+  border-left: 1px solid #BABBC1
+}

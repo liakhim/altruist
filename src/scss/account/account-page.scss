@@ -1,0 +1,111 @@
+.account {
+  margin-top: 100px;
+  .account-title {
+    margin-bottom: 40px;
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.225em;
+      text-transform: lowercase;
+    }
+  }
+  .account-tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .account-tab-contents {
+      width: calc(100% - 300px);
+      padding: 0 50px 0 0 ;
+      .account-tab-content {
+        border: 1px solid green;
+      }
+      .account-tab-content.profile {
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          label {
+            width: 100%;
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            input {
+              width: 50%;
+              height: 50px;
+            }
+            span {
+              width: 50%;
+              margin-left: 20px;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 0.225em;
+              color: #BABBC1;
+              cursor: pointer;
+            }
+          }
+          button {
+            width: 50%;
+          }
+        }
+      }
+      .button-block {
+        margin: 40px 0 0 0;
+        .btn {
+          height: 92px;
+          padding: 0 30px;
+          span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
+          }
+        }
+      }
+    }
+    .account-tab-titles {
+      width: 300px;
+      .account-tab-title {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        &:hover {
+          .account-tab-title-block {
+            background: #000;
+            p {
+              color: #fff;
+            }
+          }
+        }
+        &-block {
+          cursor: pointer;
+          border: 1px solid #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
+          }
+        }
+      }
+      .account-tab-title.active {
+        .account-tab-title-block {
+          background: #000;
+          p {
+            color: #fff;
+          }
+        }
+      }
+      .account-tab-title.orders {}
+      .account-tab-title.profile {}
+      .account-tab-title.history {}
+      .account-tab-title.faq {}
+    }
+  }
+}
+@import "account-order-item";

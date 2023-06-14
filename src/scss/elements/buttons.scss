@@ -1,3 +1,6 @@
+a.btn {
+  display: inline-flex!important;
+}
 .btn.border-button {
   border: 1px solid #000;
   border-radius: 0;
@@ -13,10 +16,19 @@
   &:focus {
     box-shadow: 0 0 10px #00000020;
   }
+  .border-button-icon {
+    transition: 0.2s;
+  }
+  span {
+    transition: 0.2s;
+  }
   &:hover {
     border: 1px solid #000;
     background: #000;
     color: #fff;
+    span {
+      color: #fff;
+    }
     .border-button-icon {
       filter: invert(1);
     }
@@ -33,6 +45,20 @@
   &:hover {
     border: 1px solid #000;
     background: #000;
+    color: #fff;
+  }
+}
+.btn.border-button.gray-button {
+  border-radius: 0;
+  border: 1px solid #BABBC1;;
+  background: #BABBC1;
+  color: #000;
+  &:focus {
+    box-shadow: 0 0 10px #00000020;
+  }
+  &:hover {
+    border: 1px solid #BABBC1;
+    background: #a8a9ad;
     color: #fff;
   }
 }

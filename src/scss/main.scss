@@ -7,6 +7,7 @@
 @import "src/scss/collections_page/delivery-block";
 @import "src/scss/payment-info/payment-info";
 @import "src/scss/cart/cart-page";
+@import "src/scss/account/account-page";
 @import "src/scss/collections_page/collections-first-block";
 @import "src/scss/general/footer";
 * {
@@ -14,6 +15,6 @@
   letter-spacing: initial;
   font-size: 18px;
 }
-.gray-background {
-  background: #F5F5F5;
-}
+//.gray-background {
+//  background: linear-gradient(#f9f9f9, #fff);
+//}
