@@ -18,6 +18,10 @@
   border: 1px solid #000;
   outline: none;
   padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.225em;
   &::placeholder {
     font-size: 16px;
   }
@@ -34,8 +38,28 @@
     }
   }
 }
+.info-block-label {
+  padding: 10px;
+  display: inline-flex;
+  background: #000;
+  span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.225em;
+  }
+}
+.info-block-label.red-label {
+  background: #C24829;
+  span {
+    color: #fff;
+  }
+}
 @import "buttons";
 @import "checkboxes";
 @import "blur-block";
 @import "accordion-restyle";
 @import "product-card";
+@import "product-detail-card";
+@import "swiper-sliider";

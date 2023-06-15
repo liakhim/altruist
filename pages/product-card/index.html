@@ -8,7 +8,7 @@
     <title>Altruist | Cart</title>
     <link rel="stylesheet" href="../../dist/css/app.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.css" integrity="sha512-Aeqz1zfbRIQHDPsvEobXzaeXDyh8CUqRdvy6QBCQEbxIc/vazrTdpjEufMbxSW61+7a5vIDDuGh8z5IekVG0YA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div id="app" class="gray-background">
@@ -112,28 +112,207 @@
     </header>
     <main>
         <section>
-            <div class="collection-card-first-block d-flex w-100">
-                <div class="background-block">
-                    <img src="/src/assets/collection-card-page.jpg" alt="">
-                </div>
-                <div class="blur-block d-flex align-items-center around-padding">
-                    <div class="texts align-items-start">
-                        <div class="small-text">
-                            <span>новая коллекция</span>
-                        </div>
-                        <div class="large-text">
-                            <span>weekend style</span>
-                            <div class="large-text-arrow">
-                                <img src="/src/assets/icons/arrow-black.svg" alt="">
+            <div class="product-detail-card">
+                <div class="container">
+                    <div class="product-detail-card-slider">
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                             class="swiper mySwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide1.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide2.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide3.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide4.jpg" alt=""/>
+                                </div>
                             </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide1.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide2.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide3.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide4.jpg" alt=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-detail-card-info">
+                        <div class="labels">
+                            <div class="info-block-label red-label">
+                                <span>-20% на модель</span>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div class="actual-price">
+                                <p>2990 р.</p>
+                            </div>
+                            <div class="before-discount-price">
+                                <p>3887 р.</p>
+                            </div>
+                        </div>
+                        <div class="name-art">
+                            <div class="name">
+                                <p>Толстовка-анорак</p>
+                            </div>
+                            <div class="delimiter"></div>
+                            <div class="art">
+                                <p>LT5457O02-T0</p>
+                            </div>
+                        </div>
+                        <div class="color-block">
+                            <div class="color-block-title">
+                                <p>ЦВЕТ: охра</p>
+                            </div>
+                            <div class="color-block-items">
+                                <div class="color-block-item ohra active"></div>
+                                <div class="color-block-item light-blue"></div>
+                                <div class="color-block-item light-gray"></div>
+                            </div>
+                        </div>
+                        <div class="size-block">
+                            <div class="size-block-title">
+                                <p>РАЗМЕР</p>
+                            </div>
+                            <div class="size-block-content">
+                                <div class="size-block-items">
+                                    <button class="size-block-item active">
+                                        <span>ХS</span>
+                                    </button>
+                                    <button class="size-block-item">
+                                        <span>S</span>
+                                    </button>
+                                    <button class="size-block-item">
+                                        <span>M</span>
+                                    </button>
+                                    <button class="size-block-item">
+                                        <span>L</span>
+                                    </button>
+                                    <button class="size-block-item">
+                                        <span>XL</span>
+                                    </button>
+                                </div>
+                                <a href="#" class="size-block-table-action">
+                                    Таблица размеров
+                                </a>
+                            </div>
+                        </div>
+                        <div class="action-block">
+                            <button class="btn border-button">
+                                <span>Добавить в корзину</span>
+                                <img class="border-button-icon right-icon" src="/src/assets/icons/arrow-black.svg" alt="">
+                            </button>
+                            <div class="like-block">
+                                <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.5556 0C15.1733 0 13.12 1.16299 12 3.08951C10.88 1.16299 8.82667 0 6.44444 0C4.7359 0.00211424 3.09793 0.700209 1.88981 1.94116C0.681686 3.18211 0.00205831 4.86459 0 6.61956C0 9.88255 2 13.2928 5.93333 16.7532C7.74945 18.3406 9.71038 19.7445 11.7889 20.9452C11.8537 20.9812 11.9263 21 12 21C12.0737 21 12.1463 20.9812 12.2111 20.9452C14.2896 19.7445 16.2506 18.3406 18.0667 16.7532C22 13.2928 24 9.88255 24 6.61956C23.9979 4.86459 23.3183 3.18211 22.1102 1.94116C20.9021 0.700209 19.2641 0.00211424 17.5556 0ZM12 20.0208C10.4444 19.1123 0.888889 13.2471 0.888889 6.61956C0.890653 5.10666 1.47654 3.65623 2.51802 2.58645C3.55951 1.51666 4.97156 0.914855 6.44444 0.913043C8.79 0.913043 10.7611 2.20386 11.5889 4.28103C11.6224 4.36476 11.6793 4.43638 11.7525 4.48678C11.8257 4.53718 11.9119 4.56409 12 4.56409C12.0881 4.56409 12.1743 4.53718 12.2475 4.48678C12.3207 4.43638 12.3776 4.36476 12.4111 4.28103C13.2389 2.20386 15.21 0.913043 17.5556 0.913043C19.0284 0.914855 20.4405 1.51666 21.482 2.58645C22.5235 3.65623 23.1093 5.10666 23.1111 6.61956C23.1111 13.2391 13.5556 19.1123 12 20.0208Z" fill="black"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="description-block">
+                            <p>ОПИСАНИЕ</p>
+
+                            <b>Толстовка-анорак</b>
+                            <p>Мягкий интерлок</p>
+                            <p>Воротник-стойка на молнии</p>
+                            <p>Длинный рукав</p>
+                            <p>Свободный силуэт</p>
+
+                            <p>Размер модели на фото: S</p>
+                            <p>Рост модели на фото: 173 см</p>
+                            <p>Параметры модели на фото:грудь: 78талия: 60бёдра: 87</p>
+                            <p>Размер этого товара меньше обычного</p>
+
+                            <b>Страна производства:</b>
+                            <p>Китай</p>
+
+                            <b>Состав</b>
+                            <p> 60% Хлопок, 40% Полиэстер</p>
+                        </div>
+                        <div class="delivery-and-payment-info">
+                            <button class="btn border-button">
+                                <span>Посмотреть условия оплаты и доставки</span>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="collection-products">
+            <div class="email-subscription-block">
                 <div class="container">
+                    <div class="title">
+                        <h3>скидка 10% за подписку</h3>
+                        <p>Узнай о новинках и будь на правдивой высоте вместе с нами.</p>
+                    </div>
+                    <div class="form">
+                        <form>
+                            <label>
+                                <input class="custom-input" type="email" placeholder="Ваш email">
+                            </label>
+                            <button class="btn border-button black-button">
+                                <span>подпишись</span>
+                                <img class="border-button-icon right-icon" src="/src/assets/icons/arrow.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="recommended-products">
+                <div class="container">
+                    <div class="recommended-products-title">
+                        <p>Вместе с этой моделью смотрят</p>
+                    </div>
+                    <div class="product-card-row">
+                        <div class="product-card full-width">
+                            <div class="product-card-image">
+                                <div class="image-block">
+                                    <img src="/src/assets/product5.jpg" alt="">
+                                </div>
+                                <div class="like-block">
+                                    <img src="/src/assets/icons/like.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="product-card-info">
+                                <div class="info-block">
+                                    <div class="info-block-labels">
+                                        <div class="info-block-label">
+                                            <span>-20% на модель</span>
+                                        </div>
+                                    </div>
+                                    <div class="info-block-prices">
+                                        <div class="actual-price">
+                                            <p>2990 р.</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-block-name">
+                                        <p>Джемпер из мягкого полотна</p>
+                                    </div>
+                                </div>
+                                <div class="action-block">
+                                    <button class="btn border-button product-card-button product-card-button-black">
+                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="sub-slider-block"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="product-card-row">
                         <div class="product-card">
                             <div class="product-card-image">
@@ -202,243 +381,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card-row">
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product3.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product4.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-row">
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product6.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block discount-mode">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                        <div class="before-discount-price">
-                                            <p>3887 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product7.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block discount-mode">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                        <div class="before-discount-price">
-                                            <p>3887 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card-row">
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product8.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block discount-mode">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                        <div class="before-discount-price">
-                                            <p>3887 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product9.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="product-card-info">
-                                <div class="info-block discount-mode">
-                                    <div class="info-block-labels">
-                                        <div class="info-block-label">
-                                            <span>-20% на модель</span>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-prices">
-                                        <div class="actual-price">
-                                            <p>2990 р.</p>
-                                        </div>
-                                        <div class="before-discount-price">
-                                            <p>3887 р.</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-block-name">
-                                        <p>Джемпер из мягкого полотна</p>
-                                    </div>
-                                </div>
-                                <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
-                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="sub-slider-block"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="email-subscription-block">
-                <div class="container">
-                    <div class="title">
-                        <h3>скидка 10% за подписку</h3>
-                        <p>Узнай о новинках и будь на правдивой высоте вместе с нами.</p>
-                    </div>
-                    <div class="form">
-                        <form>
-                            <label>
-                                <input class="custom-input" type="email" placeholder="Ваш email">
-                            </label>
-                            <button class="btn border-button black-button">
-                                <span>подпишись</span>
-                                <img class="border-button-icon right-icon" src="/src/assets/icons/arrow.svg" alt="">
-                            </button>
-                        </form>
-                    </div>
                 </div>
             </div>
         </section>
@@ -497,5 +439,24 @@
         </div>
     </footer>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js" integrity="sha512-3Ei7OPFo83kw3cPbDLeLhn/YF8tZB7Vs8sfli0B/KEekureL5eosDeshYFICCvt4K8i0yUil/lK3cSiic2Wjkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+</script>
 </body>
 </html>

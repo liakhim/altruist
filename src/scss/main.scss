@@ -8,6 +8,7 @@
 @import "src/scss/payment-info/payment-info";
 @import "src/scss/cart/cart-page";
 @import "src/scss/account/account-page";
+@import "src/scss/product-detail-card-page/product-detail-card-page";
 @import "src/scss/collections_page/collections-first-block";
 @import "src/scss/collection-card-page/collection-card-page";
 @import "src/scss/general/footer";
@@ -17,5 +18,16 @@
   font-size: 18px;
 }
 //.gray-background {
-//  background: linear-gradient(#f9f9f9, #fff);
+//  background: linear-grcadient(#f9f9f9, #fff);
 //}
+.recomended-products-title {
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.225em;
+    text-transform: lowercase;
+  }
+}
