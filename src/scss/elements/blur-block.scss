@@ -33,16 +33,35 @@
     justify-content: center;
     height: calc(100% - 42px);
     .large-text {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
       span {
         font-family: 'Aromanus', sans-serif;
         font-size: 46px;
         text-transform: uppercase;
-        line-height: 1.1;
+        line-height: 1;
         letter-spacing: initial;
+      }
+      .large-text-arrow {
+        width: 28px;
+        height: 28px;
+        transform: rotate(90deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -3px;
+        margin-left: 40px;
+        img {
+          width: 100%;
+        }
       }
     }
     .small-text {}
   }
+}
+.blur-block.around-padding {
+  padding: 40px;
 }
 @media (max-width: 769px) {
   .blur-block {

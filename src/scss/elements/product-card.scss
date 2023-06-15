@@ -1,0 +1,49 @@
+.product-card {
+  &-image {
+    .image-block {}
+    .like-block {}
+  }
+  &-info {
+    .info-block {
+      &-labels {
+        .info-block-label {
+          border: 1px solid red;
+        }
+      }
+      &-prices {
+        .actual-price {
+          p {
+            color: #000;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            letter-spacing: 0.225em;
+          }
+        }
+        .before-discount-price {
+          p {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
+            text-decoration-line: line-through;
+          }
+        }
+      }
+      &-prices.discount-mode-prices {
+        .actual-price {
+          p {
+            color: #C24829;
+          }
+        }
+        .before-discount-price {
+          p {}
+        }
+      }
+      &-name {}
+    }
+    .action-block {
+      .product-card-button {}
+    }
+    .sub-slider-block {}
+  }
+}

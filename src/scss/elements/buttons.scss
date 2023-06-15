@@ -62,3 +62,14 @@ a.btn {
     color: #fff;
   }
 }
+.btn.product-card-button-black {
+  border: 1px solid green;
+  padding: 50px;
+  .border-button-icon {
+    width: 34px;
+  }
+}
+.btn.product-card-button-red {
+  border: 1px solid red;
+  padding: 50px;
+}
