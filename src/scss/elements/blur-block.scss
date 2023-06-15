@@ -39,7 +39,8 @@
     height: calc(100% - 42px);
     .large-text {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: flex-start;
       span {
         font-family: 'Aromanus', sans-serif;
@@ -62,7 +63,15 @@
         }
       }
     }
-    .small-text {}
+    .small-text {
+      margin-bottom: 10px;
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.225em;
+      }
+    }
   }
 }
 .blur-block.around-padding {
