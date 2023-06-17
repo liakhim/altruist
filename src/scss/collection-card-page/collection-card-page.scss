@@ -1,5 +1,5 @@
 
-.collection-card-page {
+.collection-card-page, .product-card-page {
   .collection-card-first-block {
     height: 720px;
     overflow: hidden;
@@ -80,7 +80,7 @@
   }
 }
 @media (max-width: 769px) {
-  .collection-card-page {
+  .collection-card-page, .product-card-page {
     padding: 92px 0 0 0;
     .collection-card-first-block {
       height: 480px;

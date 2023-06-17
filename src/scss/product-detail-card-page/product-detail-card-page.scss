@@ -1,3 +1,14 @@
+.product-detail-card-mobile-button {
+  margin: 40px 0;
+  display: block;
+  span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.225em;
+    color: #BABBC1;
+  }
+}
 .recommended-products {
   padding: 100px 0 0 0;
   &-title {
@@ -10,6 +21,31 @@
 
       letter-spacing: 0.225em;
       text-transform: lowercase;
+    }
+  }
+}
+@media (max-width: 769px) {
+  .product-card-page {
+    padding: 92px 0 0 0;
+  }
+  .recommended-products {
+    padding: 40px 0 0 0;
+    &-title {
+      margin-bottom: 40px;
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+
+        letter-spacing: 0.225em;
+        text-transform: lowercase;
+      }
+    }
+    .product-card-row {
+      .product-card {
+        margin-bottom: 40px;
+      }
     }
   }
 }
