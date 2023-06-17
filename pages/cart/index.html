@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="app" class="gray-background">
-        <header class="header no-desktop" :class="{'mobile-menu-open': showMenu}">
+        <header class="header" :class="{'mobile-menu-open': showMenu}">
             <div class="container">
                 <div class="header-wrapper">
                     <a href="/" class="logo">
@@ -110,9 +110,12 @@
                 </div>
             </div>
         </header>
-        <main>
+        <main class="cart-page">
             <section>
                <div class="container">
+                   <div class="cart-title">
+                       <p>Оформление заказа</p>
+                   </div>
                    <div class="cart-list">
                        <div class="cart-list-goods">
                            <div class="cart-item">

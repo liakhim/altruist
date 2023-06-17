@@ -37,6 +37,11 @@
     align-items: flex-start;
     justify-content: center;
     height: calc(100% - 42px);
+    .large-text.with-arrow {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
     .large-text {
       display: flex;
       flex-direction: column;
