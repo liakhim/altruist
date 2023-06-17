@@ -39,10 +39,32 @@
             li:not(:first-child) {
               margin-top: 22px;
             }
+            li {
+              a {
+                span {
+                  font-weight: 500;
+                  font-size: 18px;
+                  line-height: 22px;
+                  letter-spacing: 0.225em;
+                  text-transform: lowercase;
+                }
+              }
+            }
           }
         }
         .auth-block {
           margin-top: 100px;
+          .personal {
+            .personal__title {
+              span {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.225em;
+                text-transform: lowercase;
+              }
+            }
+          }
         }
       }
     }
@@ -76,7 +98,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 100px 0 0 0;
     .collections-preview-block {
       flex: 1;
       min-height: 720px;
@@ -158,20 +179,27 @@
   }
 }
 .philosophy-block {
-  padding: 186px 0 150px;
+  padding: 186px 0 148px 0;
   .container {
     position: relative;
     .circle-image {
       position: absolute;
-      top: -140px;
+      top: -115px;
       right: 260px;
       width: 230px;
       img {}
     }
     .title {
-
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.225em;
+        text-transform: lowercase;
+      }
     }
     .content {
+      margin-top: 40px;
       p {
         font-size: 66px;
         line-height: 70px;
@@ -201,8 +229,14 @@
       &__text {
         p {
           padding: 0 0 0 30px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.225em;
+          text-transform: lowercase;
           a {
             text-decoration: underline!important;
+            letter-spacing: 0.225em;
           }
         }
       }
@@ -263,6 +297,266 @@
         &-name {
           background: rgba(255, 255, 255, 0.3);
           .texts {
+            margin-top: -21px;
+            .large-text {
+              span {
+                font-size: 40px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .collections-preview-block-full-width {
+        flex: 1;
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        .background-block {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &-name {
+          background: rgba(255, 255, 255, 0.3);
+          .texts {
+            .large-text {
+              span {
+                font-size: 40px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .collections-preview-block.text-right {
+        justify-content: center;
+      }
+      .collections-preview-block.text-left {
+        justify-content: center;
+      }
+      .collections-preview-block.text-center {
+        justify-content: center;
+      }
+      .collections-preview-block.black-text-button {
+        .blur-block {
+          .link {
+            &-text {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .philosophy-block {
+    padding: 40px 0;
+    .container {
+      position: relative;
+      .circle-image {
+        display: none;
+        img {}
+      }
+      .title {
+
+      }
+      .content {
+        p {
+          font-size: 36px;
+          line-height: 39.64px;
+          span {
+            font-size: 36px;
+            line-height: 39.64px;
+            font-family: 'Aromanus', sans-serif;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: initial;
+          }
+          span.gray-text {
+            padding: 5px 15px 0 15px;
+            margin-left: -15px;
+          }
+        }
+      }
+      .link {
+        margin-top: 40px;
+        &__image {}
+        &__text {
+          p {
+            padding: 0 0 0 30px;
+            a {}
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .first-block {
+    &__menu {
+      display: none;
+    }
+    &__call-to-action {
+      .background-block {
+        img {}
+      }
+      .call-to_action-block {
+        position: relative;
+        width: 313px;
+        height: 322px;
+      }
+    }
+  }
+  .collections {
+    .collections-row {
+      .collections-preview-block {
+        .background-block {
+          img {}
+        }
+        &-name {
+          background: rgba(255, 255, 255, 0.3);
+          width: 351px;
+          height: 360px;
+          .texts {
+            .texts {}
+            .large-text {
+              span {
+                font-size: 40px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .collections-preview-block-full-width {
+        flex: 1;
+        min-height: 720px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        .background-block {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &-name {
+          background: rgba(255, 255, 255, 0.3);
+          .texts {
+            .large-text {
+              span {
+                font-size: 40px;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .collections-preview-block.text-right {
+        justify-content: center;
+      }
+      .collections-preview-block.text-left {
+        justify-content: center;
+      }
+      .collections-preview-block.text-center {
+        justify-content: center;
+      }
+      .collections-preview-block.black-text-button {
+        .blur-block {
+          .link {
+            &-text {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+  .philosophy-block {
+    padding: 40px 0;
+    .container {
+      position: relative;
+      .circle-image {
+        display: none;
+        img {}
+      }
+      .title {
+
+      }
+      .content {
+        p {
+          font-size: 36px;
+          line-height: 39.64px;
+          span {
+            font-size: 36px;
+            line-height: 39.64px;
+            font-family: 'Aromanus', sans-serif;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: initial;
+          }
+          span.gray-text {
+            padding: 5px 15px 0 15px;
+            margin-left: -15px;
+          }
+        }
+      }
+      .link {
+        margin-top: 40px;
+        &__image {}
+        &__text {
+          p {
+            padding: 0 0 0 30px;
+            a {}
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .first-block {
+    &__menu {
+      display: none;
+    }
+    &__call-to-action {
+      .background-block {
+        img {}
+      }
+      .call-to_action-block {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        padding: 0 0 0 20px;
+      }
+    }
+  }
+  .collections {
+    .collections-row {
+      .collections-preview-block {
+        .background-block {
+          img {}
+        }
+        &-name {
+          background: rgba(255, 255, 255, 0.3);
+          .texts {
+            .texts {}
             .large-text {
               span {
                 font-size: 40px;

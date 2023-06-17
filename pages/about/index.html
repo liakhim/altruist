@@ -12,11 +12,11 @@
 </head>
 <body>
 <div id="app">
-    <header class="header">
+    <header class="header" :class="{'mobile-menu-open': showMenu}">
         <div class="container">
             <div class="header-wrapper">
                 <a href="/" class="logo">
-                    <img :class="{'mobile-version': showMenu}" src="/src/assets/logo-black.svg" alt="">
+                    <img src="/src/assets/logo-black.svg" alt="">
                 </a>
                 <div class="menu-actions-block">
                     <div class="menu">
@@ -60,7 +60,7 @@
                     <img src="/src/assets/icons/burger.svg" alt="">
                 </div>
             </div>
-            <div class="mobile-menu container" :class="{'active': showMenu}">
+            <div class="mobile-menu container">
                 <div class="mobile-menu-list">
                     <ul>
                         <li><a href="/">Главная</a></li>
@@ -110,15 +110,20 @@
             </div>
         </div>
     </header>
-    <main class="main">
+    <main class="main about-page">
         <section>
+            <div class="mobile-title no-desktop">
+                <div class="container">
+                    <p>о нас</p>
+                </div>
+            </div>
             <div class="first-block d-flex w-100">
-                <div class="first-block__menu">
+                <div class="first-block__left">
                     <div class="background-block">
                         <img src="/src/assets/about-1.jpg" alt="">
                     </div>
                 </div>
-                <div class="first-block__call-to-action">
+                <div class="first-block__right">
                     <div class="background-block">
                         <img src="/src/assets/about-2.jpg" alt="">
                     </div>
@@ -219,5 +224,15 @@
         </div>
     </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            showMenu: false
+        }
+    })
+</script>
 </body>
 </html>

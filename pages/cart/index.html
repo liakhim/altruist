@@ -12,11 +12,11 @@
 </head>
 <body>
     <div id="app" class="gray-background">
-        <header class="header">
+        <header class="header no-desktop" :class="{'mobile-menu-open': showMenu}">
             <div class="container">
                 <div class="header-wrapper">
                     <a href="/" class="logo">
-                        <img :class="{'mobile-version': showMenu}" src="/src/assets/logo-black.svg" alt="">
+                        <img src="/src/assets/logo-black.svg" alt="">
                     </a>
                     <div class="menu-actions-block">
                         <div class="menu">
@@ -60,7 +60,7 @@
                         <img src="/src/assets/icons/burger.svg" alt="">
                     </div>
                 </div>
-                <div class="mobile-menu container" :class="{'active': showMenu}">
+                <div class="mobile-menu container">
                     <div class="mobile-menu-list">
                         <ul>
                             <li><a href="/">Главная</a></li>

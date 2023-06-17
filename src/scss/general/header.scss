@@ -146,11 +146,13 @@
     .container {
       flex-direction: column;
       .header-wrapper {
+        padding: 20px 0;
+        align-items: flex-start;
         .logo {
           img {
             filter: invert(1);
             width: 65px;
-            transition: 0.6s;
+            //transition: 0.4s;
           }
           img.mobile-version {
             width: 260px;
@@ -180,7 +182,6 @@
         z-index: 1000;
         background: #000;
         overflow: hidden;
-        transition: 0.6s;
         &-list {
           margin-top: 30px;
           ul {
@@ -211,7 +212,7 @@
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          margin-top: 65px;
+          margin-top: 45px;
           .mobile-menu-social-icon {
             &:not(:first-child) {
               margin-left: 30px;
@@ -225,7 +226,7 @@
         &-actions {
           display: flex;
           width: 100%;
-          margin-top: auto;
+          margin-top: 40px;
           .cart-likes {
             display: flex;
             align-items: center;
@@ -273,11 +274,28 @@
         }
 
       }
-      .mobile-menu.active {
-        padding: 0 0 40px 0;
-        min-height: max(605px, calc(100vh - 230px));
-        display: flex;
-        height: calc(100vh - 230px);
+    }
+  }
+  .header.mobile-menu-open {
+    height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .header-wrapper {
+        height: 250px;
+        align-items: flex-start;
+        .logo {
+          img {
+            width: 280px;
+          }
+        }
+      }
+      .mobile-menu {
+        height: 510px;
       }
     }
   }
