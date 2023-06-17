@@ -41,3 +41,44 @@
     }
   }
 }
+@media (max-width: 769px) {
+  .delivery-block {
+    margin: 40px 0 80px;
+    .title {
+      max-width: 870px;
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.225em;
+        text-transform: lowercase;
+      }
+      h2 {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 40px
+      }
+    }
+    .content {
+      margin: 40px 0 0 0;
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.225em;
+      }
+    }
+    .button-block {
+      margin: 40px 0 0 0;
+      button {
+        padding: 30px 30px;
+        span {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.225em;
+        }
+      }
+    }
+  }
+}
