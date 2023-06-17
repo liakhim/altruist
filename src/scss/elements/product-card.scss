@@ -93,3 +93,102 @@
 .product-card.full-width {
   width: 100%;
 }
+@media (max-width: 769px) {
+  .product-card {
+    width: 100%;
+    max-width: 390px;
+    &-image {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      .image-block {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .like-block {
+        position: absolute;
+        width: 36px;
+        height: 31px;
+        top: 20px;
+        right: 20px;
+      }
+    }
+    &-info {
+      padding: 40px 0 0 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      .info-block {
+        width: 100%;
+        &-labels {
+
+        }
+        &-prices {
+          margin: 20px 0 0 0;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+          .actual-price {
+            p {
+              color: #000;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 43px;
+              letter-spacing: 0.225em;
+            }
+          }
+          .before-discount-price {
+            margin: 0 0 5px 0;
+            p {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 19px;
+              letter-spacing: 0.225em;
+              text-decoration-line: line-through;
+            }
+          }
+        }
+        &-name {
+          margin: 8px 0 0 0;
+          p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
+          }
+        }
+      }
+      .info-block.discount-mode {
+        .info-block-labels {
+          .info-block-label {
+            background: #C24829;
+            span {
+              color: #fff;
+            }
+          }
+        }
+        .info-block-prices {
+          .actual-price {
+            p {
+              color: #C24829;
+            }
+          }
+          .before-discount-price {
+            p {}
+          }
+        }
+      }
+      .action-block {
+        .product-card-button {
+          padding: 10px;
+        }
+      }
+      .sub-slider-block {}
+    }
+  }
+  .product-card.full-width {
+    width: 100%;
+  }
+}
