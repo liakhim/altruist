@@ -1,65 +1,148 @@
-.payment-info {
-  overflow: hidden;
-  padding: 100px 0 50px 0;
-  background: rgba(186, 187, 193, 0.1);
-  .container {
-    display: flex;
-    align-items: center;
-    .content-block {
-      padding: 0 100px 0 0;
-      .title {}
-      .payment-systems {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 40px;
-        &-title {
+.payment-info-page {
+  .payment-info {
+    overflow: hidden;
+    padding: 60px 0 50px 0;
+    background: rgba(186, 187, 193, 0.1);
+    .container {
+      display: flex;
+      align-items: center;
+      .content-block {
+        .title {
+          margin-top: 40px;
           p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.225em;
+            text-transform: lowercase;
+          }
+        }
+        .payment-systems {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 40px;
+          &-title {
+            p {
+              letter-spacing: initial;
+            }
+          }
+          &-icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 20px;
+            .payment-systems-icon:not(:first-child) {
+              margin-left: 20px;
+            }
+          }
+        }
+        .text {
+          margin-top: 40px;
+          h2 {
+            font-family: 'Aromanus', sans-serif;
+            font-size: 66px;
+            text-transform: uppercase;
+            letter-spacing: initial;
+            margin-bottom: 0;
+          }
+          b {
+            margin-top: 40px;
+            display: block;
+            letter-spacing: initial;
+          }
+          p {
+            margin-top: 20px!important;
+            display: block;
             letter-spacing: initial;
           }
         }
-        &-icons {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          margin-top: 20px;
-          .payment-systems-icon:not(:first-child) {
-            margin-left: 20px;
+      }
+      .image-block {
+        img {
+          margin-right: -80px;
+        }
+      }
+      .button-block {
+        margin-top: 40px;
+        .btn {
+          padding: 30px;
+          margin-left: 0!important;
+          span {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
           }
         }
       }
-      .text {
-        margin-top: 40px;
-        h2 {
-          font-family: 'Aromanus', sans-serif;
-          font-size: 66px;
-          text-transform: uppercase;
-          letter-spacing: initial;
-          margin-bottom: 0;
-        }
-        b {
+    }
+  }
+}
+
+@media (max-width: 769px) {
+.payment-info-page {
+  .payment-info {
+    overflow: hidden;
+    padding: 100px 0 50px 0;
+    background: rgba(186, 187, 193, 0.1);
+    .container {
+      display: flex;
+      align-items: center;
+      .content-block {
+        padding: 0;
+        .title {}
+        .payment-systems {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           margin-top: 40px;
-          display: block;
-          letter-spacing: initial;
+          &-title {
+            p {
+              letter-spacing: initial;
+            }
+          }
+          &-icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 20px;
+            .payment-systems-icon:not(:first-child) {
+              margin-left: 20px;
+            }
+          }
         }
-        p {
-          margin-top: 20px!important;
-          display: block;
-          letter-spacing: initial;
+        .text {
+          margin-top: 40px;
+          h2 {
+            font-size: 36px;
+          }
+          b {
+            margin-top: 40px;
+            display: block;
+            letter-spacing: initial;
+          }
+          p {
+            margin-top: 20px!important;
+            display: block;
+            letter-spacing: initial;
+          }
         }
       }
-    }
-    .image-block {
-      img {
-        margin-right: -80px;
+      .image-block {
+        display: none;
       }
-    }
-    .button-block {
-      margin-top: 40px;
-      .btn {
-        padding: 30px;
-        margin-left: 0!important;
+      .button-block {
+        margin-top: 40px;
+        .btn {
+          width: 100%;
+          max-width: 390px;
+          padding: 30px 7px;
+          margin-right: 0!important;
+        }
       }
     }
   }
+}
 }
