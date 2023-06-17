@@ -61,3 +61,84 @@
   height: 19px;
   border-left: 1px solid #BABBC1
 }
+
+@media (max-width: 769px) {
+  .account-order-item {
+    background: #f8f8f8;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      border-bottom: 1px solid #BABBC1;
+      padding: 0 0 30px 0;
+      p {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.225em;
+      }
+    }
+    &-body {
+      .order-list-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 26px 0 0 0;
+        &-part {
+          p {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.225em;
+          }
+        }
+        .name {
+          width: 100%;
+          padding: 0 0 26px 0;
+          border-bottom: 1px solid #BABBC1;
+          p {
+            font-weight: 700;
+          }
+        }
+        .art {
+          margin: 10px 0 0 0;
+          padding: 0 0 0 20px;
+          border-left: 1px solid #BABBC1;
+          p {
+            color: #BABBC1
+          }
+        }
+        .quantity {
+          margin: 30px 0 0 0;
+          padding: 0 0 0 20px;
+          border-left: 1px solid #BABBC1;
+          p {
+            color: #BABBC1
+          }
+        }
+        .price {
+          margin: 30px 0 0 0;
+          padding: 0 0 0 10px;
+          border-left: 1px solid #BABBC1;
+          p {
+            font-weight: 700;
+          }
+        }
+        .status {
+          margin: 30px 0 0 0;
+          padding: 0 0 0 20px;
+          border-left: 1px solid #BABBC1;
+          p {
+            color: #BABBC1
+          }
+        }
+      }
+    }
+  }
+  .order-list-delimiter {
+    display: none;
+  }
+}

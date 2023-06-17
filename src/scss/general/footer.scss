@@ -15,6 +15,7 @@
       }
     }
     .menu {
+      width: 176px;
       ul {
         li:not(:last-child) {
           margin-bottom: 22px;
@@ -22,8 +23,11 @@
         li {
           a {
             span {
-              letter-spacing: 0.225em;
+              font-weight: 500;
               font-size: 18px;
+              line-height: 22px;
+              letter-spacing: 0.225em;
+              text-transform: lowercase;
             }
           }
         }
