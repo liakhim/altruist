@@ -1,9 +1,18 @@
 .about-page {
+  .mobile-title {
+    display: none;
+  }
   .first-block {
     height: 720px;
     .first-block__left {
+      width: 50%;
+      position: relative;
       .background-block {
         height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         img {
           width: 100%;
           height: 100%;
@@ -12,6 +21,8 @@
       }
     }
     .first-block__right {
+      width: 50%;
+      position: relative;
       .background-block {
         height: 100%;
         img {
