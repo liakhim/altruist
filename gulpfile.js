@@ -5,7 +5,8 @@ const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
-
+const fs = require("file-system");
+const gulpRigger = require('gulp-rigger')
 // TODO: расскоментировать для сжатия
 // function compress(b, method = null) {
 //     switch (method) {
@@ -25,6 +26,29 @@ const cleancss = require('gulp-clean-css');
 //             return b;
 //     }
 // }
+function html () {
+    // пока доступна только одна вложенность (больше не требуется)
+    // если нужно - переделать на рекурсию
+    // получаем всё что внутри папки
+    const childs = fs.readdirSync('src/pages/');
+    childs.forEach(item => {
+        // проверяем папка это или файл html
+        if (item.split('.').length > 1 && item.split('.')[item.split('.').length - 1] === 'html') {
+            src('src/pages/' + item) // источник
+                .pipe(gulpRigger()) // прогоняем через rigger
+                .pipe(dest('./')) // выгружаем
+        } else {
+            // получаем всё что внутри вложенной папки
+            const folderChilds = fs.readdirSync('src/pages/' + item + '/');
+            folderChilds.forEach(it => {
+                src('src/pages/' + item + '/' + it) // источник
+                    .pipe(gulpRigger()) // прогоняем через rigger
+                    .pipe(dest('pages/' + item + '/')) // выгружаем
+            })
+        }
+    })
+    // browserSync.reload()
+}
 
 function styles(method=null) {
     let b = src(['src/scss/main.scss']) // источник
@@ -42,7 +66,9 @@ function styles(method=null) {
 
 function startwatch() {
     watch('src/scss/**/*').on('change', styles);
+    watch('src/pages/**/*').on('change', html);
+    watch('src/html-modules/*.html').on('change', html);
 }
 
-exports.build = parallel(styles);
-exports.default = parallel(styles, startwatch);
+exports.build = parallel(styles, html);
+exports.default = parallel(styles, html, startwatch);

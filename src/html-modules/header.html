@@ -1,0 +1,98 @@
+<header class="header" :class="{'mobile-menu-open': showMenu}">
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="/" class="logo">
+                <img src="/src/assets/logo-black.svg" alt="">
+            </a>
+            <div class="menu-actions-block">
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="/">главная</a>
+                        </li>
+                        <li>
+                            <a href="/">коллекции</a>
+                        </li>
+                        <li>
+                            <a href="/">доставка/оплата</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="actions">
+                    <div class="action-block cart">
+                        <div class="icon">
+                            <img src="/src/assets/icons/basket.svg" alt="">
+                        </div>
+                        <div class="counter">
+                            <span>2</span>
+                        </div>
+                    </div>
+                    <div class="action-block likes">
+                        <div class="icon">
+                            <img src="/src/assets/icons/like.svg" alt="">
+                        </div>
+                        <div class="counter">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="action-block auth">
+                        <div class="icon">
+                            <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="burger" @click="showMenu = !showMenu">
+                <img src="/src/assets/icons/burger.svg" alt="">
+            </div>
+        </div>
+        <div class="mobile-menu container">
+            <div class="mobile-menu-list">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="collections">коллекции</a></li>
+                    <li><a href="delivery">доставка/оплата</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-contacts">
+                <p>с 9:00 до 21:00</p>
+                <a href="tel:84957777777">+7 495 777 77 77</a>
+            </div>
+            <div class="mobile-menu-socials">
+                <a href="#" class="mobile-menu-social-icon">
+                    <img src="/src/assets/icons/tg.svg" alt="">
+                </a>
+                <a href="#" class="mobile-menu-social-icon">
+                    <img src="/src/assets/icons/wa.svg" alt="">
+                </a>
+            </div>
+            <div class="mobile-menu-actions">
+                <div class="cart-likes">
+                    <a href="#" class="action-block cart">
+                        <div class="icon">
+                            <img src="/src/assets/icons/basket.svg" alt="">
+                        </div>
+                        <div class="counter">
+                            <span>1</span>
+                        </div>
+                    </a>
+                    <a href="#" class="action-block likes">
+                        <div class="icon">
+                            <img src="/src/assets/icons/like.svg" alt="">
+                        </div>
+                        <div class="counter">
+                            <span>2</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="auth">
+                    <div class="action-block auth">
+                        <div class="icon">
+                            <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altruist | About us</title>
+    //=  ../../html-modules/head-links.html
+</head>
+<body>
+<div id="app">
+    //=  ../../html-modules/header.html
+    <main class="main about-page">
+        <section>
+            <div class="mobile-title no-desktop">
+                <div class="container">
+                    <p>о нас</p>
+                </div>
+            </div>
+            <div class="first-block d-flex w-100">
+                <div class="first-block__left">
+                    <div class="background-block">
+                        <img src="/src/assets/about-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="first-block__right">
+                    <div class="background-block">
+                        <img src="/src/assets/about-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="philosophy-block content-block">
+                <div class="container">
+                    <div class="title">
+                        <p>о нас</p>
+                    </div>
+                    <div class="content">
+                        <p>
+                            <span>Мы создаем образы для тех,</span>
+                            <span>кто хочет часто менять наряды.</span>
+                            <span class="gray-text">Altruist – мода на правдивой высоте.</span>
+                            <span>Alt – высота, tru – причастность,</span>
+                            <span>ist – мы не придумали, но звучит</span>
+                            <span>красиво, а?</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="about-text-block">
+                <div class="container">
+                    <div class="content">
+                        <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем
+                            так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
+                            тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат
+                            Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками
+                            в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum
+                            в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"),
+                            написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху
+                            Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из
+                            строк в разделе 1.10.32</p>
+                    </div>
+                    <div class="button-block">
+                        <button class="btn border-button">Скачать юридическую документацию</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    //= ../../html-modules/footer.html
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            showMenu: false
+        }
+    })
+</script>
+</body>
+</html>

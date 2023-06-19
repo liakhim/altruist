@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Altruist | Payment info</title>
+    //=  ../../html-modules/head-links.html
+</head>
+<body>
+<div id="app">
+    //=  ../../html-modules/header.html
+    <main class="payment-info-page">
+        <section>
+            <div class="payment-info">
+                <div class="container">
+                    <div class="content-block">
+                        <div class="title">
+                            <p>доставка/оплата</p>
+                        </div>
+                        <div class="text">
+                            <h2>мы осуществляем доставку курьерской службой сдэк</h2>
+                            <p>Все заказы оформляются и оплачиваются на сайте.
+                                Для успешного оформления заказа оплату нужно произвести в течение 20 минут,
+                                в противном случае товар не резервируется и заказ отменяется.</p>
+
+                            <p> Убедительная просьба. При получении посылки в ТК проверяйте целостность упаковки. При
+                                наличии повреждений оформляйте претензию на месте получения. За порчу товара во время
+                                транспортировки ответственность не несем.</p>
+                        </div>
+                        <div class="payment-systems">
+                            <div class="payment-systems-title">
+                                <p>Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем:</p>
+                            </div>
+                            <div class="payment-systems-icons">
+                                <div class="payment-systems-icon">
+                                    <img src="/src/assets/icons/payment-systems/visa.svg" alt="">
+                                </div>
+                                <div class="payment-systems-icon">
+                                    <img src="/src/assets/icons/payment-systems/mastercard.svg" alt="">
+                                </div>
+                                <div class="payment-systems-icon">
+                                    <img src="/src/assets/icons/payment-systems/maestro.svg" alt="">
+                                </div>
+                                <div class="payment-systems-icon">
+                                    <img src="/src/assets/icons/payment-systems/mir.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <b>Срок возврата товара надлежащего качества составляет 30 днейс момента получения товара, за
+                                исключением товаров, неподлежащих возврату по Закон РФ от 07.02.1992 N 2300-1 (ред. от
+                                03.07.2016) «О защите прав потребителей»</b>
+                            <p>Возврат переведённых средств, производится на ваш банковский счёт в течение 5-30 рабочих дней
+                                (срок зависит от банка, который выдал вашу банковскую карту).</p>
+                        </div>
+                        <div class="button-block">
+                            <button class="btn border-button">
+                                <span>выбрать себе что-то красивое</span>
+                                <img class="border-button-icon right-icon" src="/src/assets/icons/arrow-black.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="image-block">
+                        <img src="/src/assets/payment-back.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    //= ../../html-modules/footer.html
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!',
+            showMenu: false
+        }
+    })
+</script>
+</body>
+</html>
