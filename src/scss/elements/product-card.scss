@@ -95,7 +95,6 @@
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-      margin-left: 80px;
        &-item {
          &:not(:first-child) {
            margin-left: 10px;
@@ -111,6 +110,12 @@
 }
 .product-card.full-width {
   width: 100%;
+  .product-card-info {
+    .sub-slider-block {
+        margin-left: 80px;
+    }
+  }
+
 }
 @media (max-width: 769px) {
   .product-card {

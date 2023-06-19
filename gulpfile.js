@@ -3,6 +3,7 @@ let preprocessor = 'sass';
 const { src, dest, parallel, watch } = require('gulp');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass')(require('sass'));
+const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const fs = require("file-system");
@@ -26,6 +27,15 @@ const gulpRigger = require('gulp-rigger')
 //             return b;
 //     }
 // }
+function browsersync() {
+    browserSync.init({ // Инициализация Browsersync
+        server: { baseDir: './' }, // Указываем папку сервера
+        notify: false, // Отключаем уведомления
+        online: true // Режим работы: true или false
+    })
+}
+
+
 function html () {
     // пока доступна только одна вложенность (больше не требуется)
     // если нужно - переделать на рекурсию
@@ -71,4 +81,4 @@ function startwatch() {
 }
 
 exports.build = parallel(styles, html);
-exports.default = parallel(styles, html, startwatch);
+exports.default = parallel(styles, html, browsersync, startwatch);
