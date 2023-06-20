@@ -13,7 +13,7 @@
     <main class="product-card-page">
         <section>
             <div class="container">
-                <a href="#" class="product-detail-card-mobile-button no-desktop">
+                <a href="/pages/collection-card" class="product-detail-card-mobile-button no-desktop">
                     <span>Назад к коллекции</span>
                     <img src="/src/assets/icons/back-arrow.svg" alt="">
                 </a>
@@ -185,13 +185,26 @@
                         <p>Вместе с этой моделью смотрят</p>
                     </div>
                     <div class="product-card-row">
-                        <div class="product-card full-width">
-                            <div class="product-card-image">
-                                <div class="image-block">
-                                    <img src="/src/assets/product5.jpg" alt="">
-                                </div>
-                                <div class="like-block">
-                                    <img src="/src/assets/icons/like.svg" alt="">
+                        <div class="product-card-slider">
+                            <div class="product-card-main-slider">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                     class="swiper product-main-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/product5.jpg" alt=""/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/subslider2.jpg" alt=""/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/subslider3.jpg" alt=""/>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/src/assets/subslider4.jpg" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
                                 </div>
                             </div>
                             <div class="product-card-info">
@@ -216,22 +229,74 @@
                                     </button>
                                 </div>
                                 <div class="sub-slider-block">
-                                    <div class="sub-slider-block-item">
-                                        <img src="/src/assets/subslider1.jpg" alt="">
-                                    </div>
-                                    <div class="sub-slider-block-item">
-                                        <img src="/src/assets/subslider2.jpg" alt="">
-                                    </div>
-                                    <div class="sub-slider-block-item">
-                                        <img src="/src/assets/subslider3.jpg" alt="">
-                                    </div>
-                                    <div class="sub-slider-block-item">
-                                        <img src="/src/assets/subslider4.jpg" alt="">
+                                    <div thumbsSlider="" class="swiper product-sub-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/src/assets/subslider1.jpg" alt=""/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/src/assets/subslider2.jpg" alt=""/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/src/assets/subslider3.jpg" alt=""/>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/src/assets/subslider4.jpg" alt=""/>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+<!--                    <div class="product-card-row">-->
+<!--                        <div class="product-card full-width">-->
+<!--                            <div class="product-card-image">-->
+<!--                                <div class="image-block">-->
+<!--                                    <img src="/src/assets/product5.jpg" alt="">-->
+<!--                                </div>-->
+<!--                                <div class="like-block">-->
+<!--                                    <img src="/src/assets/icons/like.svg" alt="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="product-card-info">-->
+<!--                                <div class="info-block">-->
+<!--                                    <div class="info-block-labels">-->
+<!--                                        <div class="info-block-label">-->
+<!--                                            <span>-20% на модель</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="info-block-prices">-->
+<!--                                        <div class="actual-price">-->
+<!--                                            <p>2990 р.</p>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="info-block-name">-->
+<!--                                        <p>Джемпер из мягкого полотна</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="action-block">-->
+<!--                                    <button class="btn border-button product-card-button product-card-button-black">-->
+<!--                                        <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                                <div class="sub-slider-block">-->
+<!--                                    <div class="sub-slider-block-item">-->
+<!--                                        <img src="/src/assets/subslider1.jpg" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="sub-slider-block-item">-->
+<!--                                        <img src="/src/assets/subslider2.jpg" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="sub-slider-block-item">-->
+<!--                                        <img src="/src/assets/subslider3.jpg" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="sub-slider-block-item">-->
+<!--                                        <img src="/src/assets/subslider4.jpg" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="product-card-row">
                         <div class="product-card">
                             <div class="product-card-image">
@@ -259,9 +324,9 @@
                                     </div>
                                 </div>
                                 <div class="action-block">
-                                    <button class="btn border-button product-card-button product-card-button-black">
+                                    <a href="pages/product-card" class="btn border-button product-card-button product-card-button-black">
                                         <img class="border-button-icon" src="/src/assets/icons/arrow-black.svg" alt="">
-                                    </button>
+                                    </a>
                                 </div>
                                 <div class="sub-slider-block"></div>
                             </div>
