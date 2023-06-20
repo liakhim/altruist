@@ -96,19 +96,19 @@
                             </div>
                             <div class="size-block-content">
                                 <div class="size-block-items">
-                                    <button class="size-block-item active">
+                                    <button class="size-block-item" @click="activeSize = 'xs'" :class="{'active': activeSize === 'xs'}">
                                         <span>ХS</span>
                                     </button>
-                                    <button class="size-block-item">
+                                    <button class="size-block-item" @click="activeSize = 's'" :class="{'active': activeSize === 's'}">
                                         <span>S</span>
                                     </button>
-                                    <button class="size-block-item">
+                                    <button class="size-block-item" @click="activeSize = 'm'" :class="{'active': activeSize === 'm'}">
                                         <span>M</span>
                                     </button>
-                                    <button class="size-block-item">
+                                    <button class="size-block-item" @click="activeSize = 'l'" :class="{'active': activeSize === 'l'}">
                                         <span>L</span>
                                     </button>
-                                    <button class="size-block-item">
+                                    <button class="size-block-item" @click="activeSize = 'xl'" :class="{'active': activeSize === 'xl'}">
                                         <span>XL</span>
                                     </button>
                                 </div>

@@ -2,7 +2,31 @@ let app = new Vue({
     el: '#app',
     data: {
         message: 'Hello Vue!',
-        showMenu: false
+        showMenu: false,
+        activeTab: 'orders',
+        activeSize: 'xs', // ['xs', 's', 'm', 'l', 'xl']
+        products: [
+            {
+                id: 0,
+                quantity: 1
+            },
+            {
+                id: 1,
+                quantity: 3
+            }
+        ]
+    },
+    methods: {
+        incrementQuantity (item) {
+            let ind = this.products.indexOf(this.products.find(v => v.id === item))
+            this.products[ind].quantity++
+        },
+        decrementQuantity (item) {
+            let ind = this.products.indexOf(this.products.find(v => v.id === item))
+            if (this.products[ind].quantity > 1) {
+                this.products[ind].quantity--
+            }
+        },
     }
 })
 

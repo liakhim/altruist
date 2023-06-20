@@ -8,6 +8,11 @@
   .cart-item__image {
     width: 338px;
     height: 338px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .cart-item__info {
     padding: 0 40px;

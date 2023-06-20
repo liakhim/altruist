@@ -33,14 +33,14 @@
                         </ul>
                     </div>
                     <div class="actions">
-                        <div class="action-block cart">
+                        <a href="/pages/cart" class="action-block cart">
                             <div class="icon">
                                 <img src="/src/assets/icons/basket.svg" alt="">
                             </div>
                             <div class="counter">
                                 <span>2</span>
                             </div>
-                        </div>
+                        </a>
                         <div class="action-block likes">
                             <div class="icon">
                                 <img src="/src/assets/icons/like.svg" alt="">
@@ -64,8 +64,8 @@
                 <div class="mobile-menu-list">
                     <ul>
                         <li><a href="/">Главная</a></li>
-                        <li><a href="collections">коллекции</a></li>
-                        <li><a href="delivery">доставка/оплата</a></li>
+                        <li><a href="/pages/collections">коллекции</a></li>
+                        <li><a href="/pages/payment-info">доставка/оплата</a></li>
                     </ul>
                 </div>
                 <div class="mobile-menu-contacts">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="mobile-menu-actions">
                     <div class="cart-likes">
-                        <a href="#" class="action-block cart">
+                        <a href="/pages/cart" class="action-block cart">
                             <div class="icon">
                                 <img src="/src/assets/icons/basket.svg" alt="">
                             </div>
@@ -151,15 +151,15 @@
                                 </div>
                                 <div class="cart-item__info-quantity-counter">
                                     <div class="minus">
-                                        <button class="btn border-button">
+                                        <button  @click="decrementQuantity(0)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/minus.svg" alt="">
                                         </button>
                                     </div>
                                     <div class="result">
-                                        <span>100</span>
+                                        <span>{{products[0].quantity}}</span>
                                     </div>
                                     <div class="plus">
-                                        <button class="btn border-button">
+                                        <button  @click="incrementQuantity(0)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/plus.svg" alt="">
                                         </button>
                                     </div>
@@ -168,7 +168,7 @@
                         </div>
                         <div class="cart-item">
                             <div class="cart-item__image">
-                                <img src="/src/assets/cart-item-image.jpg" alt="">
+                                <img src="/src/assets/product1.jpg" alt="">
                             </div>
                             <div class="cart-item__info">
                                 <div class="title">
@@ -199,14 +199,14 @@
                                 </div>
                                 <div class="cart-item__info-quantity-counter">
                                     <div class="minus">
-                                        <button class="btn border-button">
+                                        <button @click="decrementQuantity(1)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/minus.svg" alt="">
                                         </button>
                                     </div>
                                     <div class="result">
-                                        <span>100</span>
+                                        <span>{{products[1].quantity}}</span>
                                     </div>
-                                    <div class="plus">
+                                    <div @click="incrementQuantity(1)" class="plus">
                                         <button class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/plus.svg" alt="">
                                         </button>
@@ -374,10 +374,10 @@
                             <a href="/"><span>главная</span></a>
                         </li>
                         <li>
-                            <a href="collections"><span>коллекции</span></a>
+                            <a href="/pages/collections"><span>коллекции</span></a>
                         </li>
                         <li>
-                            <a href="delivery"><span>доставка/оплата</span></a>
+                            <a href="/pages/payment-info"><span>доставка/оплата</span></a>
                         </li>
                     </ul>
                 </div>

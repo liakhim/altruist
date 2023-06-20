@@ -52,15 +52,15 @@
                                 </div>
                                 <div class="cart-item__info-quantity-counter">
                                     <div class="minus">
-                                        <button class="btn border-button">
+                                        <button  @click="decrementQuantity(0)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/minus.svg" alt="">
                                         </button>
                                     </div>
                                     <div class="result">
-                                        <span>100</span>
+                                        <span>{{products[0].quantity}}</span>
                                     </div>
                                     <div class="plus">
-                                        <button class="btn border-button">
+                                        <button  @click="incrementQuantity(0)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/plus.svg" alt="">
                                         </button>
                                     </div>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="cart-item">
                             <div class="cart-item__image">
-                                <img src="/src/assets/cart-item-image.jpg" alt="">
+                                <img src="/src/assets/product1.jpg" alt="">
                             </div>
                             <div class="cart-item__info">
                                 <div class="title">
@@ -100,14 +100,14 @@
                                 </div>
                                 <div class="cart-item__info-quantity-counter">
                                     <div class="minus">
-                                        <button class="btn border-button">
+                                        <button @click="decrementQuantity(1)" class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/minus.svg" alt="">
                                         </button>
                                     </div>
                                     <div class="result">
-                                        <span>100</span>
+                                        <span>{{products[1].quantity}}</span>
                                     </div>
-                                    <div class="plus">
+                                    <div @click="incrementQuantity(1)" class="plus">
                                         <button class="btn border-button">
                                             <img class="border-button-icon" src="/src/assets/icons/plus.svg" alt="">
                                         </button>
