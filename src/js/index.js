@@ -38,7 +38,7 @@ let app = new Vue({
             this.headerCartCounter++
             this.scrollToTop()
             this.showNotification = true
-        }s
+        }
     }
 })
 
