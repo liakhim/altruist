@@ -4,7 +4,11 @@ let app = new Vue({
         message: 'Hello Vue!',
         showMenu: false,
         activeTab: 'orders',
+        activeColor: 0,
         activeSize: 'xs', // ['xs', 's', 'm', 'l', 'xl']
+        showNotification: false,
+        showAuthBlock: false,
+        headerCartCounter: 1,
         products: [
             {
                 id: 0,
@@ -27,6 +31,14 @@ let app = new Vue({
                 this.products[ind].quantity--
             }
         },
+        scrollToTop() {
+            window.scrollTo(0,0);
+        },
+        addToCart() {
+            this.headerCartCounter++
+            this.scrollToTop()
+            this.showNotification = true
+        }s
     }
 })
 

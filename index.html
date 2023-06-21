@@ -11,9 +11,226 @@
 </head>
 <body>
 <div id="app">
+    <div class="no-desktop">
+        <header class="header" :class="{'mobile-menu-open': showMenu}">
+            <div class="container">
+                <div class="header-wrapper">
+                    <a href="/" class="logo">
+                        <img src="/src/assets/logo-black.svg" alt="">
+                    </a>
+                    <div class="menu-actions-block">
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <a href="/">главная</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/collections">коллекции</a>
+                                </li>
+                                <li>
+                                    <a href="/pages/payment-info">доставка/оплата</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="actions">
+                            <div class="action-block cart">
+                                <a href="/pages/cart" class="icon">
+                                    <img src="/src/assets/icons/basket.svg" alt="">
+                                </a>
+                                <div class="counter">
+                                    <span>{{headerCartCounter}}</span>
+                                </div>
+                                <div class="cart-notification" :class="{'active': showNotification}">
+                                    <div class="cart-notification-box">
+                                        <div class="cart-notification-box-arrow"></div>
+                                        <div class="cart-notification-box-text">
+                                            <p>Товар успешно добавлен в корзину!</p>
+                                        </div>
+                                        <div class="cart-notification-box-close" @click="showNotification = false">
+                                            <img src="/src/assets/icons/cross-black.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-block likes">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/like.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <button @click="showAuthBlock = true" type="button" class="action-block auth btn-transparent">
+                                <span class="icon">
+                                    <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="burger" @click="showMenu = !showMenu">
+                        <img src="/src/assets/icons/burger.svg" alt="">
+                    </div>
+                </div>
+                <div class="mobile-menu container">
+                    <div class="mobile-menu-list">
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="/pages/collections">коллекции</a></li>
+                            <li><a href="/pages/payment-info">доставка/оплата</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-contacts">
+                        <p>с 9:00 до 21:00</p>
+                        <a href="tel:84957777777">+7 495 777 77 77</a>
+                    </div>
+                    <div class="mobile-menu-socials">
+                        <a href="#" class="mobile-menu-social-icon">
+                            <img src="/src/assets/icons/tg.svg" alt="">
+                        </a>
+                        <a href="#" class="mobile-menu-social-icon">
+                            <img src="/src/assets/icons/wa.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="mobile-menu-actions">
+                        <div class="cart-likes">
+                            <a href="/pages/cart" class="action-block cart">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/basket.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>{{headerCartCounter}}</span>
+                                </div>
+                            </a>
+                            <a href="#" class="action-block likes">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/like.svg" alt="">
+                                </div>
+                                <div class="counter">
+                                    <span>2</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div @click="showAuthBlock = true" class="auth">
+                            <button type="button" class="action-block auth">
+                                <div class="icon">
+                                    <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-form" :class="{'active': showAuthBlock}">
+                <div class="left">
+                    <form>
+                        <div class="title">
+                            <p>Уже зарегистрированы?</p>
+                        </div>
+                        <label>
+                            <input class="custom-input custom-input-small" type="email" name="email" placeholder="Адрес электронной почты">
+                        </label>
+                        <label>
+                            <input class="custom-input custom-input-small" type="password" name="password" placeholder="Пароль">
+                        </label>
+                        <div class="button-block">
+                            <button type="button" class="btn black-button border-button">
+                                <span>Войти</span>
+                            </button>
+                        </div>
+                        <div class="forgot-pass-block">
+                            <a href="#">Я забыл пароль</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="right">
+                    <div class="close-block">
+                        <button type="button" @click="showAuthBlock = false" class="btn-transparent">
+                            <img src="/src/assets/icons/cross.svg" alt="">
+                        </button>
+                    </div>
+                    <form>
+                        <div class="title">
+                            <p>Вы здесь первый раз?</p>
+                        </div>
+                        <label>
+                            <input class="custom-input custom-input-small white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                        </label>
+                        <label>
+                            <input class="custom-input custom-input-small white-input" type="text" name="name" placeholder="Ваше имя">
+                        </label>
+                        <label>
+                            <input class="custom-input custom-input-small white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                        </label>
+                        <div class="button-block">
+                            <button type="button" class="btn white-button-transparent border-button">
+                                <span>Войти</span>
+                            </button>
+                        </div>
+                        <div class="terms-block">
+                            <p>Нажимая на кнопку Создать аккаунт, Вы соглашаетесь с <a href="#">Условиями и Положениями.</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+    </div>
     <main class="main">
         <section>
             <div class="first-block d-flex w-100">
+                <div class="overlay" :class="{'show-overlay': showAuthBlock}">
+                    <div class="auth-form no-absolute" :class="{'active': showAuthBlock}">
+                        <div class="left">
+                            <form>
+                                <div class="title">
+                                    <p>Уже зарегистрированы?</p>
+                                </div>
+                                <label>
+                                    <input class="custom-input custom-input-small" type="email" name="email" placeholder="Адрес электронной почты">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small" type="password" name="password" placeholder="Пароль">
+                                </label>
+                                <div class="button-block">
+                                    <button type="button" class="btn black-button border-button">
+                                        <span>Войти</span>
+                                    </button>
+                                </div>
+                                <div class="forgot-pass-block">
+                                    <a href="#">Я забыл пароль</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="right">
+                            <div class="close-block">
+                                <button type="button" @click="showAuthBlock = false" class="btn-transparent">
+                                    <img src="/src/assets/icons/cross.svg" alt="">
+                                </button>
+                            </div>
+                            <form>
+                                <div class="title">
+                                    <p>Вы здесь первый раз?</p>
+                                </div>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="text" name="name" placeholder="Ваше имя">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                                </label>
+                                <div class="button-block">
+                                    <button type="button" class="btn white-button-transparent border-button">
+                                        <span>Войти</span>
+                                    </button>
+                                </div>
+                                <div class="terms-block">
+                                    <p>Нажимая на кнопку Создать аккаунт, Вы соглашаетесь с <a href="#">Условиями и Положениями.</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div class="first-block__menu">
                     <div class="background-block">
                         <img src="/src/assets/first-block-1.jpg" alt="">
@@ -43,7 +260,7 @@
                                 </ul>
                             </div>
                             <div class="auth-block">
-                                <button type="submit" class="personal">
+                                <button @click="showAuthBlock = true" type="button" class="personal">
                                         <span class="personal__title">
                                             <span>Личный кабинет</span>
                                         </span>

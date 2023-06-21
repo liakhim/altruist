@@ -48,6 +48,42 @@ a.btn {
     color: #fff;
   }
 }
+.btn-transparent {
+  background: none;
+  outline: none;
+  border: none;
+}
+.btn.border-button.white-button {
+  border-radius: 0;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+  &:focus {
+    box-shadow: 0 0 10px #00000020;
+  }
+  &:hover {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+  }
+}
+.btn.border-button.white-button-transparent {
+  border-radius: 0;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  &:focus {
+    box-shadow: 0 0 10px #00000020;
+  }
+  &:hover {
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+  }
+  &:focus {
+    border: 1px solid #fff;
+  }
+}
 .btn.border-button.gray-button {
   border-radius: 0;
   border: 1px solid #BABBC1;;

@@ -9,9 +9,66 @@
 </head>
 <body>
 <div id="app">
+    <div class="no-desktop">
+        //=  ../html-modules/header.html
+    </div>
     <main class="main">
         <section>
             <div class="first-block d-flex w-100">
+                <div class="overlay" :class="{'show-overlay': showAuthBlock}">
+                    <div class="auth-form no-absolute" :class="{'active': showAuthBlock}">
+                        <div class="left">
+                            <form>
+                                <div class="title">
+                                    <p>Уже зарегистрированы?</p>
+                                </div>
+                                <label>
+                                    <input class="custom-input custom-input-small" type="email" name="email" placeholder="Адрес электронной почты">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small" type="password" name="password" placeholder="Пароль">
+                                </label>
+                                <div class="button-block">
+                                    <button type="button" class="btn black-button border-button">
+                                        <span>Войти</span>
+                                    </button>
+                                </div>
+                                <div class="forgot-pass-block">
+                                    <a href="#">Я забыл пароль</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="right">
+                            <div class="close-block">
+                                <button type="button" @click="showAuthBlock = false" class="btn-transparent">
+                                    <img src="/src/assets/icons/cross.svg" alt="">
+                                </button>
+                            </div>
+                            <form>
+                                <div class="title">
+                                    <p>Вы здесь первый раз?</p>
+                                </div>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="text" name="name" placeholder="Ваше имя">
+                                </label>
+                                <label>
+                                    <input class="custom-input custom-input-small white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                                </label>
+                                <div class="button-block">
+                                    <button type="button" class="btn white-button-transparent border-button">
+                                        <span>Войти</span>
+                                    </button>
+                                </div>
+                                <div class="terms-block">
+                                    <p>Нажимая на кнопку Создать аккаунт, Вы соглашаетесь с <a href="#">Условиями и Положениями.</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div class="first-block__menu">
                     <div class="background-block">
                         <img src="/src/assets/first-block-1.jpg" alt="">
@@ -41,7 +98,7 @@
                                 </ul>
                             </div>
                             <div class="auth-block">
-                                <button type="submit" class="personal">
+                                <button @click="showAuthBlock = true" type="button" class="personal">
                                         <span class="personal__title">
                                             <span>Личный кабинет</span>
                                         </span>

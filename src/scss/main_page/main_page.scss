@@ -3,6 +3,24 @@
   min-height: 800px;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+  .overlay {
+    display: none;
+    position: absolute;
+    width: calc(100%);
+    // backdrop-filter: blur(10px);
+    background: #00000060;
+    height: 100%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    padding: 0 0 0 384px;
+  }
+  .overlay.show-overlay {
+    display: flex;
+  }
   &__menu {
     width: 50%;
     position: relative;
@@ -23,6 +41,7 @@
       height: 100%;
       width: 384px;
       backdrop-filter: blur(15px);
+      z-index: 2;
       &-wrapper {
         height: 100%;
         padding: 40px 30px 40px 100px;

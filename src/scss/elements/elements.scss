@@ -36,6 +36,28 @@
     &::placeholder {
       display: none;
     }
+    &:focus {
+      &::placeholder {
+        color: #000;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.custom-input.custom-input-small {
+  height: 50px;
+  font-size: 12px!important;
+  &::placeholder {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+.custom-input.white-input {
+  border: 1px solid #fff;
+  color: #fff;
+  &::placeholder {
+    color: #fff;
   }
 }
 .info-block-label {
@@ -64,3 +86,4 @@
 @import "product-card-slider";
 @import "product-detail-card";
 @import "swiper-sliider";
+@import "notification";
