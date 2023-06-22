@@ -126,13 +126,15 @@
                         <p>Уже зарегистрированы?</p>
                     </div>
                     <label>
-                        <input class="custom-input custom-input-small" type="email" name="email" placeholder="Адрес электронной почты">
+                        <input v-model="loginEmail" class="custom-input custom-input-small" :class="{'error': loginFormSend && loginEmail.length === 0}" type="email" name="email" placeholder="Адрес электронной почты">
+                        <span v-if="loginFormSend && loginEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                     </label>
                     <label>
-                        <input class="custom-input custom-input-small" type="password" name="password" placeholder="Пароль">
+                        <input v-model="loginPassword" class="custom-input custom-input-small" :class="{'error': loginFormSend && loginEmail.length === 0}" type="password" name="password" placeholder="Пароль">
+                        <span v-if="loginFormSend && loginPassword.length === 0" class="error">Это поле обязательно к заполнению</span>
                     </label>
                     <div class="button-block">
-                        <button type="button" class="btn black-button border-button">
+                        <button @click="loginFormSend = true" type="button" class="btn black-button border-button">
                             <span>Войти</span>
                         </button>
                     </div>
@@ -152,16 +154,19 @@
                         <p>Вы здесь первый раз?</p>
                     </div>
                     <label>
-                        <input class="custom-input custom-input-small white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                        <input v-model="signUpEmail" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpEmail.length === 0}"  type="email" name="email" placeholder="Адрес электронной почты">
+                        <span v-if="signInFormSend && signUpEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                     </label>
                     <label>
-                        <input class="custom-input custom-input-small white-input" type="text" name="name" placeholder="Ваше имя">
+                        <input v-model="signUpName" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpName.length === 0}" type="text" name="name" placeholder="Ваше имя">
+                        <span v-if="signInFormSend && signUpName.length === 0" class="error">Это поле обязательно к заполнению</span>
                     </label>
                     <label>
-                        <input class="custom-input custom-input-small white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                        <input v-model="signUpLastName" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpLastName.length === 0}" type="text" name="last_name" placeholder="Ваша фамилия">
+                        <span v-if="signInFormSend && signUpLastName.length === 0" class="error">Это поле обязательно к заполнению</span>
                     </label>
                     <div class="button-block">
-                        <button type="button" class="btn white-button-transparent border-button">
+                        <button @click="signInFormSend = true" type="button" class="btn white-button-transparent border-button">
                             <span>Войти</span>
                         </button>
                     </div>

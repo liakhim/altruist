@@ -189,6 +189,10 @@
         textarea {
           width: 100%;
         }
+        span.error {
+          color: red;
+          letter-spacing: 0.225em
+        }
       }
       label.text-area-label {
         margin-top: 10px;

@@ -1,4 +1,9 @@
 $step: 4;
+.checkbox-type-1.error {
+  .after:after {
+    border: 1px solid red!important;
+  }
+}
 .checkbox-type-1 {
   position: relative;
   cursor: pointer;

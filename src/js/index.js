@@ -18,7 +18,28 @@ let app = new Vue({
                 id: 1,
                 quantity: 3
             }
-        ]
+        ],
+        loginEmail: '',
+        loginEmailError: '',
+        loginPassword: '',
+        loginPasswordError: '',
+        signUpEmail: '',
+        signUpEmailError: '',
+        signUpName: '',
+        signUpNameError: '',
+        signUpLastName: '',
+        signUpLastNameError: '',
+        loginFormSend: false,
+        signInFormSend: false,
+        mailCheckbox: false,
+        termsCheckbox: false,
+        orderCreated: false,
+        cartName: '',
+        cartLastName: '',
+        cartPhone: '',
+        cartEmail: '',
+        cartComment: '',
+        cartSend: false
     },
     methods: {
         incrementQuantity (item) {
@@ -38,6 +59,20 @@ let app = new Vue({
             this.headerCartCounter++
             this.scrollToTop()
             this.showNotification = true
+        },
+        createOrder () {
+            if (!this.termsCheckbox || !this.mailCheckbox) {
+
+            }
+            this.orderCreated = true
+        }
+    },
+    watch: {
+        mailCheckbox () {
+            this.orderCreated = false
+        },
+        termsCheckbox() {
+            this.orderCreated = false
         }
     }
 })

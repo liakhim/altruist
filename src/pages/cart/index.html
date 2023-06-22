@@ -131,20 +131,20 @@
                         </div>
                         <div class="delimiter-block"></div>
                         <div class="button-block">
-                            <button class="btn border-button black-button">
+                            <button @click="createOrder()" class="btn border-button black-button">
                                 <span>Оформить заказ</span>
                             </button>
                             <div class="checkbox-block">
-                                <label class="checkbox-type-1">
-                                    <input type="checkbox">
+                                <label class="checkbox-type-1" :class="{'error': !termsCheckbox && orderCreated}">
+                                    <input v-model="termsCheckbox" type="checkbox">
                                     <span class="after"></span>
                                 </label>
                                 <p class="checkbox-block-label">Я принимаю <a href="#">пользовательское соглашение</a> и даю согласие на
                                     <a href="#">обработку персональных данных</a></p>
                             </div>
                             <div class="checkbox-block">
-                                <label class="checkbox-type-1">
-                                    <input type="checkbox">
+                                <label class="checkbox-type-1" :class="{'error': !mailCheckbox && orderCreated}">
+                                    <input v-model="mailCheckbox" type="checkbox">
                                     <span class="after"></span>
                                 </label>
                                 <p class="checkbox-block-label">Подписаться на рассылку персональных предложений и акций</p>
@@ -163,18 +163,22 @@
                     <form>
                         <div class="form-row">
                             <label>
-                                <input class="custom-input" type="text" name="name" placeholder="Ваше имя">
+                                <input v-model="cartName" class="custom-input" :class="{'error': cartSend && cartName.length === 0}" type="text" name="name" placeholder="Ваше имя">
+                                <span v-if="cartSend && cartName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input" type="text" name="last_name" placeholder="Ваше фамилия">
+                                <input v-model="cartLastName" class="custom-input" :class="{'error': cartSend && cartLastName.length === 0}" type="text" name="last_name" placeholder="Ваше фамилия">
+                                <span v-if="cartSend && cartLastName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                         </div>
                         <div class="form-row">
                             <label>
-                                <input class="custom-input" type="tel" name="phone" placeholder="Ваш телефон">
+                                <input v-model="cartPhone" class="custom-input" :class="{'error': cartSend && cartPhone.length === 0}" type="tel" name="phone" placeholder="Ваш телефон">
+                                <span v-if="cartSend && cartPhone.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input" type="email" name="email" placeholder="Ваше email">
+                                <input v-model="cartEmail" class="custom-input" :class="{'error': cartSend && cartEmail.length === 0}" type="email" name="email" placeholder="Ваше email">
+                                <span v-if="cartSend && cartEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                         </div>
                         <div class="form-row">
@@ -229,7 +233,7 @@
                                 <p>Доставка: от 3 дней</p>
                                 <p>Cтоимость: от 349 руб.</p>
                             </div>
-                            <button class="btn border-button black-button to-pay-button">
+                            <button @click="cartSend = true" class="btn border-button black-button to-pay-button">
                                 <span>Перейти к оплате</span>
                             </button>
                             <div class="social-icons-block">
