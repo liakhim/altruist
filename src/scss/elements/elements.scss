@@ -35,6 +35,7 @@
     border: 1px solid #BABBC1;
     &::placeholder {
       display: none;
+      color: transparent!important;
     }
     &:focus {
       &::placeholder {

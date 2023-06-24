@@ -9,6 +9,7 @@
 </head>
 <body>
 <div id="app" class="gray-background">
+    //=  ../../html-modules/header.html
     <main class="account-page">
         <section>
             <div>
@@ -19,18 +20,20 @@
                                 <p>Уже зарегистрированы?</p>
                             </div>
                             <label>
-                                <input class="custom-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                <input v-model="loginEmail" class="custom-input" :class="{'error': loginFormSend && loginEmail.length === 0}" type="email" name="email" placeholder="Адрес электронной почты">
+                                <span v-if="loginFormSend && loginEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input" type="password" name="password" placeholder="Пароль">
+                                <input v-model="loginPassword" class="custom-input" :class="{'error': loginFormSend && loginEmail.length === 0}" type="password" name="password" placeholder="Пароль">
+                                <span v-if="loginFormSend && loginPassword.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <div class="button-block">
-                                <button class="btn black-button border-button">
+                                <button @click.prevent="loginFormSend = true" type="button" class="btn black-button border-button">
                                     <span>Войти</span>
                                 </button>
                             </div>
                             <div class="forgot-pass-block">
-                                <a href="#">Я забыл пароль</a>
+                                <a href="/pages/password">Я забыл пароль</a>
                             </div>
                         </form>
                     </div>
@@ -40,17 +43,20 @@
                                 <p>Вы здесь первый раз?</p>
                             </div>
                             <label>
-                                <input class="custom-input white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                <input v-model="signUpEmail" class="custom-input white-input" :class="{'error': signInFormSend && signUpEmail.length === 0}"  type="email" name="email" placeholder="Адрес электронной почты">
+                                <span v-if="signInFormSend && signUpEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input white-input" type="text" name="name" placeholder="Ваше имя">
+                                <input v-model="signUpName" class="custom-input white-input" :class="{'error': signInFormSend && signUpName.length === 0}" type="text" name="name" placeholder="Ваше имя">
+                                <span v-if="signInFormSend && signUpName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                                <input v-model="signUpLastName" class="custom-input white-input" :class="{'error': signInFormSend && signUpLastName.length === 0}" type="text" name="last_name" placeholder="Ваша фамилия">
+                                <span v-if="signInFormSend && signUpLastName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <div class="button-block">
-                                <button class="btn white-button-transparent border-button">
-                                    <span>Создать аккаунт</span>
+                                <button type="button" @click.prevent="signInFormSend = true" class="btn white-button-transparent border-button">
+                                    <span>Войти</span>
                                 </button>
                             </div>
                             <div class="terms-block">
@@ -62,6 +68,7 @@
             </div>
         </section>
     </main>
+    //=  ../../html-modules/footer.html
 </div>
 //= ../../html-modules/js-links.html
 </body>

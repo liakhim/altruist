@@ -50,6 +50,11 @@
           }
           button {
             width: 50%;
+            height: 50px;
+            span {
+              letter-spacing: .225em;
+              font-size: 16px;
+            }
           }
         }
       }

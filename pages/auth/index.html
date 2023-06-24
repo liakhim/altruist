@@ -12,6 +12,115 @@
 </head>
 <body>
 <div id="app" class="gray-background">
+    <header class="header" :class="{'mobile-menu-open': showMenu}">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="/" class="logo">
+                    <img src="/src/assets/logo-black.svg" alt="">
+                </a>
+                <div class="menu-actions-block">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="/">главная</a>
+                            </li>
+                            <li>
+                                <a href="/pages/collections">коллекции</a>
+                            </li>
+                            <li>
+                                <a href="/pages/payment-info">доставка/оплата</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="actions">
+                        <div class="action-block cart">
+                            <a href="/pages/cart" class="icon">
+                                <img src="/src/assets/icons/basket.svg" alt="">
+                            </a>
+                            <div class="counter">
+                                <span>{{headerCartCounter}}</span>
+                            </div>
+                            <div class="cart-notification" :class="{'active': showNotification}">
+                                <div class="cart-notification-box">
+                                    <div class="cart-notification-box-arrow"></div>
+                                    <div class="cart-notification-box-text">
+                                        <p>Товар успешно добавлен в корзину!</p>
+                                    </div>
+                                    <div class="cart-notification-box-close" @click="showNotification = false">
+                                        <img src="/src/assets/icons/cross-black.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-block likes">
+                            <div class="icon">
+                                <img src="/src/assets/icons/like.svg" alt="">
+                            </div>
+                            <div class="counter">
+                                <span>5</span>
+                            </div>
+                        </div>
+                        <a href="/pages/auth" type="button" class="action-block auth btn-transparent">
+                            <span class="icon">
+                                <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="burger" @click="showMenu = !showMenu">
+                    <img src="/src/assets/icons/burger.svg" alt="">
+                </div>
+            </div>
+            <div class="mobile-menu container">
+                <div class="mobile-menu-list">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/pages/collections">коллекции</a></li>
+                        <li><a href="/pages/payment-info">доставка/оплата</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu-contacts">
+                    <p>с 9:00 до 21:00</p>
+                    <a href="tel:84957777777">+7 495 777 77 77</a>
+                </div>
+                <div class="mobile-menu-socials">
+                    <a href="#" class="mobile-menu-social-icon">
+                        <img src="/src/assets/icons/tg.svg" alt="">
+                    </a>
+                    <a href="#" class="mobile-menu-social-icon">
+                        <img src="/src/assets/icons/wa.svg" alt="">
+                    </a>
+                </div>
+                <div class="mobile-menu-actions">
+                    <div class="cart-likes">
+                        <a href="/pages/cart" class="action-block cart">
+                            <div class="icon">
+                                <img src="/src/assets/icons/basket.svg" alt="">
+                            </div>
+                            <div class="counter">
+                                <span>{{headerCartCounter}}</span>
+                            </div>
+                        </a>
+                        <a href="#" class="action-block likes">
+                            <div class="icon">
+                                <img src="/src/assets/icons/like.svg" alt="">
+                            </div>
+                            <div class="counter">
+                                <span>2</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div @click="showAuthBlock = true" class="auth">
+                        <a href="/pages/auth" type="button" class="action-block auth btn-transparent">
+                            <div class="icon">
+                                <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <main class="account-page">
         <section>
             <div>
@@ -22,18 +131,20 @@
                                 <p>Уже зарегистрированы?</p>
                             </div>
                             <label>
-                                <input class="custom-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                <input v-model="loginEmail" class="custom-input" :class="{'error': loginFormSend && loginEmail.length === 0}" type="email" name="email" placeholder="Адрес электронной почты">
+                                <span v-if="loginFormSend && loginEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input" type="password" name="password" placeholder="Пароль">
+                                <input v-model="loginPassword" class="custom-input" :class="{'error': loginFormSend && loginEmail.length === 0}" type="password" name="password" placeholder="Пароль">
+                                <span v-if="loginFormSend && loginPassword.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <div class="button-block">
-                                <button class="btn black-button border-button">
+                                <button @click.prevent="loginFormSend = true" type="button" class="btn black-button border-button">
                                     <span>Войти</span>
                                 </button>
                             </div>
                             <div class="forgot-pass-block">
-                                <a href="#">Я забыл пароль</a>
+                                <a href="/pages/password">Я забыл пароль</a>
                             </div>
                         </form>
                     </div>
@@ -43,17 +154,20 @@
                                 <p>Вы здесь первый раз?</p>
                             </div>
                             <label>
-                                <input class="custom-input white-input" type="email" name="email" placeholder="Адрес электронной почты">
+                                <input v-model="signUpEmail" class="custom-input white-input" :class="{'error': signInFormSend && signUpEmail.length === 0}"  type="email" name="email" placeholder="Адрес электронной почты">
+                                <span v-if="signInFormSend && signUpEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input white-input" type="text" name="name" placeholder="Ваше имя">
+                                <input v-model="signUpName" class="custom-input white-input" :class="{'error': signInFormSend && signUpName.length === 0}" type="text" name="name" placeholder="Ваше имя">
+                                <span v-if="signInFormSend && signUpName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <label>
-                                <input class="custom-input white-input" type="text" name="last_name" placeholder="Ваша фамилия">
+                                <input v-model="signUpLastName" class="custom-input white-input" :class="{'error': signInFormSend && signUpLastName.length === 0}" type="text" name="last_name" placeholder="Ваша фамилия">
+                                <span v-if="signInFormSend && signUpLastName.length === 0" class="error">Это поле обязательно к заполнению</span>
                             </label>
                             <div class="button-block">
-                                <button class="btn white-button-transparent border-button">
-                                    <span>Создать аккаунт</span>
+                                <button type="button" @click.prevent="signInFormSend = true" class="btn white-button-transparent border-button">
+                                    <span>Войти</span>
                                 </button>
                             </div>
                             <div class="terms-block">
@@ -65,6 +179,67 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="container d-flex">
+            <div class="footer__logo-menu d-flex">
+                <a href="/" class="logo">
+                    <img src="/src/assets/logo-black.svg" alt="">
+                </a>
+                <div class="menu">
+                    <button type="button" class="personal mobile-auth">
+                                <span class="personal__title">
+                                    <span>Личный кабинет</span>
+                                </span>
+                        <span class="personal__icon">
+                                    <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                                </span>
+                    </button>
+                    <ul>
+                        <li>
+                            <a href="/"><span>главная</span></a>
+                        </li>
+                        <li>
+                            <a href="/pages/collections"><span>коллекции</span></a>
+                        </li>
+                        <li>
+                            <a href="/pages/payment-info"><span>доставка/оплата</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__contacts d-flex">
+                <div class="footer__contacts-wrapper">
+                    <div class="time">
+                        <p>с 9:00 до 21:00</p>
+                    </div>
+                    <div class="phone">
+                        <a href="tel:74957777777">+7 495 777 77 77</a>
+                    </div>
+                    <div class="social d-flex">
+                        <a href="#" class="social__block">
+                            <img src="/src/assets/icons/tg.svg" alt="">
+                        </a>
+                        <a href="#" class="social__block">
+                            <img src="/src/assets/icons/wa.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__auth">
+                <button type="button" class="personal">
+                            <span class="personal__title">
+                                <span>Личный кабинет</span>
+                            </span>
+                    <span class="personal__icon">
+                                <img src="/src/assets/icons/personal-in-black.svg" alt="">
+                            </span>
+                </button>
+                <div class="org">
+                    <p>пао «василек</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js" integrity="sha512-3Ei7OPFo83kw3cPbDLeLhn/YF8tZB7Vs8sfli0B/KEekureL5eosDeshYFICCvt4K8i0yUil/lK3cSiic2Wjkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>

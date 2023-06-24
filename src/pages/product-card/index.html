@@ -23,7 +23,7 @@
                     <div class="product-detail-card-slider">
                         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                              class="swiper mySwiper2">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" v-if="activeColor === 0 || activeColor === 2">
                                 <div class="swiper-slide">
                                     <img src="/src/assets/slide1.jpg" alt=""/>
                                 </div>
@@ -37,11 +37,22 @@
                                     <img src="/src/assets/slide4.jpg" alt=""/>
                                 </div>
                             </div>
+                            <div class="swiper-wrapper" v-if="activeColor === 1">
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide1-green.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide2-green.png" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide3-green.jpg" alt=""/>
+                                </div>
+                            </div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
                         <div thumbsSlider="" class="swiper mySwiper">
-                            <div class="swiper-wrapper">
+                            <div class="swiper-wrapper" v-if="activeColor === 0 || activeColor === 2">
                                 <div class="swiper-slide">
                                     <img src="/src/assets/slide1.jpg" alt=""/>
                                 </div>
@@ -53,6 +64,17 @@
                                 </div>
                                 <div class="swiper-slide">
                                     <img src="/src/assets/slide4.jpg" alt=""/>
+                                </div>
+                            </div>
+                            <div class="swiper-wrapper" v-if="activeColor === 1">
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide1-green.jpg" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide2-green.png" alt=""/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/src/assets/slide3-green.jpg" alt=""/>
                                 </div>
                             </div>
                         </div>
@@ -85,9 +107,9 @@
                                 <p>ЦВЕТ: охра</p>
                             </div>
                             <div class="color-block-items">
-                                <div class="color-block-item ohra active"></div>
-                                <div class="color-block-item light-blue"></div>
-                                <div class="color-block-item light-gray"></div>
+                                <div class="color-block-item ohra" :class="{active: activeColor === 0}" @click="activeColor = 0"></div>
+                                <div class="color-block-item light-blue" :class="{active: activeColor === 1}" @click="activeColor = 1"></div>
+                                <div class="color-block-item light-gray" :class="{active: activeColor === 2}" @click="activeColor = 2"></div>
                             </div>
                         </div>
                         <div class="size-block">

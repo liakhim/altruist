@@ -61,11 +61,11 @@
                                 <span>5</span>
                             </div>
                         </div>
-                        <button @click="showAuthBlock = true" type="button" class="action-block auth btn-transparent">
+                        <a href="/pages/auth" type="button" class="action-block auth btn-transparent">
                             <span class="icon">
                                 <img src="/src/assets/icons/personal-in-black.svg" alt="">
                             </span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="burger" @click="showMenu = !showMenu">
@@ -112,70 +112,13 @@
                         </a>
                     </div>
                     <div @click="showAuthBlock = true" class="auth">
-                        <button type="button" class="action-block auth btn-transparent">
+                        <a href="/pages/auth" type="button" class="action-block auth btn-transparent">
                             <div class="icon">
                                 <img src="/src/assets/icons/personal-in-black.svg" alt="">
                             </div>
-                        </button>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="auth-form" :class="{'active': showAuthBlock}">
-            <div class="left">
-                <form>
-                    <div class="title">
-                        <p>Уже зарегистрированы?</p>
-                    </div>
-                    <label>
-                        <input v-model="loginEmail" class="custom-input custom-input-small" :class="{'error': loginFormSend && loginEmail.length === 0}" type="email" name="email" placeholder="Адрес электронной почты">
-                        <span v-if="loginFormSend && loginEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
-                    </label>
-                    <label>
-                        <input v-model="loginPassword" class="custom-input custom-input-small" :class="{'error': loginFormSend && loginEmail.length === 0}" type="password" name="password" placeholder="Пароль">
-                        <span v-if="loginFormSend && loginPassword.length === 0" class="error">Это поле обязательно к заполнению</span>
-                    </label>
-                    <div class="button-block">
-                        <button @click="loginFormSend = true" type="button" class="btn black-button border-button">
-                            <span>Войти</span>
-                        </button>
-                    </div>
-                    <div class="forgot-pass-block">
-                        <a href="#">Я забыл пароль</a>
-                    </div>
-                </form>
-            </div>
-            <div class="right">
-                <div class="close-block">
-                    <button type="button" @click="showAuthBlock = false" class="btn-transparent">
-                        <img src="/src/assets/icons/cross.svg" alt="">
-                    </button>
-                </div>
-                <form>
-                    <div class="title">
-                        <p>Вы здесь первый раз?</p>
-                    </div>
-                    <label>
-                        <input v-model="signUpEmail" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpEmail.length === 0}"  type="email" name="email" placeholder="Адрес электронной почты">
-                        <span v-if="signInFormSend && signUpEmail.length === 0" class="error">Это поле обязательно к заполнению</span>
-                    </label>
-                    <label>
-                        <input v-model="signUpName" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpName.length === 0}" type="text" name="name" placeholder="Ваше имя">
-                        <span v-if="signInFormSend && signUpName.length === 0" class="error">Это поле обязательно к заполнению</span>
-                    </label>
-                    <label>
-                        <input v-model="signUpLastName" class="custom-input custom-input-small white-input" :class="{'error': signInFormSend && signUpLastName.length === 0}" type="text" name="last_name" placeholder="Ваша фамилия">
-                        <span v-if="signInFormSend && signUpLastName.length === 0" class="error">Это поле обязательно к заполнению</span>
-                    </label>
-                    <div class="button-block">
-                        <button @click="signInFormSend = true" type="button" class="btn white-button-transparent border-button">
-                            <span>Войти</span>
-                        </button>
-                    </div>
-                    <div class="terms-block">
-                        <p>Нажимая на кнопку Создать аккаунт, Вы соглашаетесь с <a href="#">Условиями и Положениями.</a></p>
-                    </div>
-                </form>
             </div>
         </div>
     </header>
