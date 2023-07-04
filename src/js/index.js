@@ -39,9 +39,23 @@ let app = new Vue({
         cartPhone: '',
         cartEmail: '',
         cartComment: '',
-        cartSend: false
+        cartSend: false,
+        showSizeModal: false
     },
     methods: {
+        etst () {
+            this.$refs.modal.show()
+        },
+        openModal() {
+            document.getElementById("backdrop").style.display = "block"
+            document.getElementById("exampleModal").style.display = "block"
+            document.getElementById("exampleModal").classList.add("show")
+        },
+        closeModal() {
+            document.getElementById("backdrop").style.display = "none"
+            document.getElementById("exampleModal").style.display = "none"
+            document.getElementById("exampleModal").classList.remove("show")
+        },
         incrementQuantity (item) {
             let ind = this.products.indexOf(this.products.find(v => v.id === item))
             this.products[ind].quantity++

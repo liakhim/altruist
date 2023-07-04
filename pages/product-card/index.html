@@ -245,7 +245,7 @@
                                         <span>XL</span>
                                     </button>
                                 </div>
-                                <a href="#" class="size-block-table-action">
+                                <a @click="showSizeModal = true" role="button" class="size-block-table-action">
                                     Таблица размеров
                                 </a>
                             </div>
@@ -501,6 +501,125 @@
                 </div>
             </div>
         </section>
+        <div class="custom-modal-wrapper" :class="{active: showSizeModal}">
+            <div class="custom-modal-overlay" @click="showSizeModal = false"></div>
+            <div class="custom-modal-content">
+                <div class="custom-modal-content-header">
+                    <div class="title">
+                        <p>Таблица размеров</p>
+                    </div>
+                    <div class="close-button" @click="showSizeModal = false">
+                        <button class="btn btn-transparent">
+                            <img src="/src/assets/icons/cross-black.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="custom-modal-content-body">
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Европейский размер</p>
+                        </div>
+                        <div class="size-col">
+                            <p>XS</p>
+                        </div>
+                        <div class="size-col">
+                            <p>S</p>
+                        </div>
+                        <div class="size-col">
+                            <p>M</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>L</p>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Российский размер</p>
+                        </div>
+                        <div class="size-col">
+                            <p>42</p>
+                        </div>
+                        <div class="size-col">
+                            <p>44</p>
+                        </div>
+                        <div class="size-col">
+                            <p>46</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>48</p>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Рост (см)</p>
+                        </div>
+                        <div class="size-col">
+                            <p>166</p>
+                        </div>
+                        <div class="size-col">
+                            <p>168</p>
+                        </div>
+                        <div class="size-col">
+                            <p>170</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>172</p>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Обхват груди (см)</p>
+                        </div>
+                        <div class="size-col">
+                            <p>84</p>
+                        </div>
+                        <div class="size-col">
+                            <p>88</p>
+                        </div>
+                        <div class="size-col">
+                            <p>92</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>96</p>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Обхват талии (см)</p>
+                        </div>
+                        <div class="size-col">
+                            <p>62,2</p>
+                        </div>
+                        <div class="size-col">
+                            <p>66,2</p>
+                        </div>
+                        <div class="size-col">
+                            <p>70,2</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>74,2</p>
+                        </div>
+                    </div>
+                    <div class="size-row">
+                        <div class="size-col size-first-col">
+                            <p>Обхват бедер (см)</p>
+                        </div>
+                        <div class="size-col">
+                            <p>88</p>
+                        </div>
+                        <div class="size-col">
+                            <p>92</p>
+                        </div>
+                        <div class="size-col">
+                            <p>96</p>
+                        </div>
+                        <div class="size-col size-last-col">
+                            <p>100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container d-flex">
